@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yusuf Bitim'in Sanat Dünyası</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+p{
+font-size:22px;
+max-width:700px;
+line-height:1.7;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:15px 35px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+section{
+padding:80px 10%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#1b1b1b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#252525;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#d4af37;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#111;
+color:#888;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Yusuf Bitim'in Sanat Dünyası</h1>
+
+<p>
+Şiirler, kısa filmler ve şarkılar...
+Duyguların kelimelere, görüntülere ve melodilere dönüştüğü kişisel sanat arşivi.
+</p>
+
+<a href="#eserler" class="btn">Keşfet</a>
+
+</header>
+
+<section id="eserler">
+
+<div class="cards">
+
+<div class="card">
+<h2>📝 Şiirler</h2>
+<p>Kalemimden dökülen dizeler.</p>
+</div>
+
+<div class="card">
+<h2>🎬 Kısa Filmler</h2>
+<p>Hayata farklı pencerelerden bakan hikâyeler.</p>
+</div>
+
+<div class="card">
+<h2>🎵 Şarkılar</h2>
+<p>Duyguların notalara dönüştüğü eserler.</p>
+</div>
+
+<div class="card">
+<h2>👤 Hakkımda</h2>
+<p>Sanat yolculuğumu yakından tanıyın.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
+
+</footer>
+
+</body>
+</html>
