@@ -1,44 +1,49 @@
-<section class="iletisim">
+<!DOCTYPE html>
+<html lang="tr">
 
-<h1>İletişim</h1>
+<head>
 
-<p>
-Şiir, kitap, şarkı sözleri, senaryo çalışmaları ve sanat projeleri hakkında benimle iletişime geçebilirsiniz.
-</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<form action="https://formspree.io/f/mrendyyk" method="POST">
-
-<label>Ad Soyad</label>
-<input type="text" name="adsoyad" placeholder="Adınız Soyadınız" required>
-
-
-<label>E-posta</label>
-<input type="email" name="email" placeholder="E-posta adresiniz" required>
-
-
-<label>Mesajınız</label>
-<textarea name="mesaj" rows="6" placeholder="Mesajınızı yazınız..." required></textarea>
-
-
-<button type="submit">Gönder</button>
-
-</form>
-
-</section>
-
+<title>İletişim | Yusuf Bitim</title>
 
 <style>
 
+body{
+background:#111;
+color:white;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+header{
+background:#000;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
 .iletisim{
 max-width:700px;
-margin:50px auto;
+margin:80px auto;
 padding:20px;
-color:white;
 }
 
 .iletisim h1{
 font-size:40px;
-margin-bottom:20px;
+color:#d4af37;
 }
 
 .iletisim p{
@@ -69,8 +74,8 @@ font-size:16px;
 button{
 
 padding:15px;
-background:white;
-color:#111;
+background:#d4af37;
+color:black;
 border:none;
 border-radius:8px;
 font-size:18px;
@@ -78,11 +83,67 @@ cursor:pointer;
 
 }
 
-
-button:hover{
-
-opacity:0.8;
-
-}
-
 </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h2>Yusuf Bitim</h2>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="siirler.html">Şiirler</a>
+<a href="kisa-filmler.html">Kısa Filmler</a>
+<a href="sarki-sozleri.html">Şarkı Sözleri</a>
+<a href="iletisim.html">İletişim</a>
+</nav>
+
+</header>
+
+
+
+<section class="iletisim">
+
+<h1>İletişim</h1>
+
+<p>
+Şiir, kitap, şarkı sözleri, senaryo çalışmaları ve sanat projeleri hakkında benimle iletişime geçebilirsiniz.
+</p>
+
+
+<form action="https://formspree.io/f/mrendyyk" method="POST">
+
+
+<label>Ad Soyad</label>
+
+<input type="text" name="adsoyad" placeholder="Adınız Soyadınız" required>
+
+
+
+<label>E-posta</label>
+
+<input type="email" name="email" placeholder="E-posta adresiniz" required>
+
+
+
+<label>Mesajınız</label>
+
+<textarea name="mesaj" rows="6" placeholder="Mesajınızı yazınız..." required></textarea>
+
+
+<button type="submit">Gönder</button>
+
+
+</form>
+
+</section>
+
+
+</body>
+
+</html>
