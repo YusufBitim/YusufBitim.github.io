@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 <title>Yusuf Bitim | Şair • Yazar • Şarkı Sözü Yazarı • Senaryo Yazarı</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -28,6 +30,7 @@ align-items:center;
 position:fixed;
 width:100%;
 top:0;
+z-index:10;
 }
 
 header h2{
@@ -48,6 +51,11 @@ align-items:center;
 flex-direction:column;
 text-align:center;
 background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.hero img{
+border-radius:50%;
+margin-bottom:20px;
 }
 
 .hero h1{
@@ -75,6 +83,20 @@ section{
 padding:80px 10%;
 }
 
+.about p{
+margin-top:20px;
+line-height:1.7;
+}
+
+.about h3{
+margin-top:30px;
+color:#d4af37;
+}
+
+.about li{
+margin:10px;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -99,11 +121,14 @@ padding:30px;
 background:black;
 color:#999;
 }
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -119,23 +144,78 @@ color:#999;
 
 </header>
 
+
+
 <div class="hero">
+
 <img src="5040caf1-d331-41ce-adfa-665688192e78.png" alt="Yusuf Bitim" width="250">
+
 <h1>Yusuf Bitim</h1>
 
 <p>
-
 Şair • Yazar • Şarkı Sözü Yazarı • Senaryo Yazarı
-
 <br><br>
-
 Kelimelerin, görüntülerin ve melodilerin buluştuğu kişisel sanat arşivi.
-
 </p>
 
 <a class="btn" href="siirler.html">Şiirleri Keşfet</a>
 
 </div>
+
+
+
+<section class="about">
+
+<h2>Hakkımızda</h2>
+
+<p>
+Yusuf Bitim, şiir, roman, masal ve şarkı sözleri alanlarında
+eserler üreten bir yazar ve söz yazarıdır.
+</p>
+
+<p>
+Sanat yolculuğunda duyguları, insan hikâyelerini ve hayatın
+içinden izleri kaleme alarak okuyucularla buluşturmaktadır.
+</p>
+
+
+<h3>Kitaplarımız</h3>
+
+<p>
+Yayınlanmış üç şiir kitabı bulunmaktadır:
+</p>
+
+<ul>
+<li><strong>Yeminli Gözlerim</strong></li>
+<li><strong>Gitmeyecektin</strong></li>
+<li><strong>Dokunma</strong></li>
+</ul>
+
+
+<p>
+Roman türündeki eseri <strong>Kuş Parkı</strong> ve masal türündeki
+eseri <strong>Uzun Yol Masalı</strong> ile farklı yaşamlara ve
+hayal dünyalarına dokunmayı amaçlamaktadır.
+</p>
+
+
+<h3>Şarkı Sözleri</h3>
+
+<p>
+Yazdığı şarkı sözleri, AI destekli müzik çalışmalarıyla
+bestelenerek çeşitli müzik platformlarında dinleyicilerle
+buluşmaktadır.
+</p>
+
+
+<p>
+Bu site; şiirlerin, kitapların, hikâyelerin, şarkı sözlerinin ve
+sanat çalışmalarının yer aldığı kişisel bir sanat arşividir.
+</p>
+
+</section>
+
+
 
 <section>
 
@@ -143,41 +223,51 @@ Kelimelerin, görüntülerin ve melodilerin buluştuğu kişisel sanat arşivi.
 
 <div class="cards">
 
-<a href="siirler.html" style="text-decoration:none;color:white;">
 
 <div class="card">
-<h3><div class="card">
-...
-</div>/h3>
-<p>Kelimelere sığdırdığım duygular, hayatın içinden izler ve sessizliğe bırakılmış dizeler.</p>
+<h3>📖 Şiirler</h3>
+<p>
+Kelimelere sığdırdığım duygular, hayatın içinden izler ve sessizliğe bırakılmış dizeler.
+</p>
 </div>
 
-</a>
 
 <div class="card">
 <h3>🎬 Kısa Filmler</h3>
-<p>Hayata farklı pencerelerden bakan, duyguyu görüntüyle anlatan kısa film çalışmalarım.</p>
+<p>
+Hayata farklı pencerelerden bakan, duyguyu görüntüyle anlatan kısa film çalışmalarım.
+</p>
 </div>
+
 
 <div class="card">
 <h3>🎵 Şarkı Sözleri</h3>
-<p>Notalarla buluşmayı bekleyen, hikâyelerden ve duygulardan doğan şarkı sözleri.</p>
+<p>
+Notalarla buluşmayı bekleyen, hikâyelerden ve duygulardan doğan şarkı sözleri.
+</p>
 </div>
+
 
 <div class="card">
 <h3>📖 Senaryolar</h3>
-<p>Özgün hikâyeler, karakterler ve sinemaya dönüşmeyi bekleyen senaryo çalışmaları.</p>
+<p>
+Özgün hikâyeler, karakterler ve sinemaya dönüşmeyi bekleyen senaryo çalışmaları.
+</p>
 </div>
+
 
 </div>
 
 </section>
+
+
 
 <footer>
 
 © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
 
 </footer>
+
 
 </body>
 </html>
