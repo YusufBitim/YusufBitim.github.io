@@ -3,34 +3,72 @@
 
   <url>
     <loc>https://yusufbitim.com/</loc>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/siirler.html</loc>
-  </url>
-
-  <url>
-    <loc>https://yusufbitim.com/kisa-filmler.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/sarkilar.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/kitaplar.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/hikayeler.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/kisa-filmler.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/galeri.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yusufbitim.com/iletisim.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/ahla.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/bundan-sanane.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/aklimi-alir-guzelligin.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/olumler-tasiyorum.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/adimiz-aska-kavusuyor.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yusufbitim.com/ici%20d%C3%B6nenler.html</loc>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
