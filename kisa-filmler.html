@@ -12,86 +12,58 @@
 
 <style>
 
-body{
-background:#111;
-color:white;
-font-family:Arial,sans-serif;
-margin:0;
+/* ================= BEĞENİ BUTONU ================= */
+
+.like-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px dashed rgba(212,175,55,.20);
 }
 
-header{
-background:#000;
-padding:20px;
-text-align:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
+.like-btn{
+    background:#d4af37;
+    color:#111;
+    border:none;
+    padding:10px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:bold;
+    transition:all .3s ease;
+    margin-top:0 !important;
+    margin-right:0 !important;
 }
 
-header a{
-color:#d4af37;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
+.like-btn:hover{
+    background:#e8c04a;
+    transform:translateY(-2px);
 }
 
-main{
-max-width:900px;
-margin:50px auto;
-padding:20px;
+.like-btn.liked{
+    background:#d4af37;
+    color:#111;
 }
 
-h1{
-text-align:center;
-color:#d4af37;
-margin-bottom:40px;
+.like-count{
+    color:#999;
+    font-size:14px;
+    font-weight:bold;
 }
 
-.film{
-background:#1f1f1f;
-padding:30px;
-border-radius:15px;
-margin-bottom:30px;
-border-left:4px solid #d4af37;
+/* Kalp */
+.heart-icon{
+    font-size:18px;
+    transition:.3s;
 }
 
-.film h2{
-color:#d4af37;
-margin-top:0;
-}
-
-.info{
-color:#999;
-font-size:16px;
-margin:15px 0 25px 0;
-}
-
-.film p{
-white-space:pre-line;
-line-height:1.8;
-font-size:18px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 30px;
-background:#d4af37;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-}
-
-.btn:hover{
-opacity:.9;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:#888;
+.like-btn.liked .heart-icon{
+    color:#e53935;
 }
 
 </style>
