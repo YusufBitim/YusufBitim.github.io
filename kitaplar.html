@@ -1,358 +1,205 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Taslakları | Yusuf Bitim</title>
+    <meta name="description" content="Yusuf Bitim'in yayınlanmış kitapları ve yeni kitap taslakları arşivi. Yeminli Gözlerim, Gitmeyecektin, Dokunma ve Kuş Parkı romanı.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<title>Kitap Taslakları | Yusuf Bitim</title>
+        body {
+            background: #111;
+            color: white;
+            padding-top: 140px;
+        }
 
-<style>
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+        h1 {
+            color: #e4b52d;
+            font-size: 30px;
+        }
 
-body{
-background:#111;
-color:white;
-}
+        .geri {
+            display: block;
+            color: #e4b52d;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-header{
-background:#000;
-padding:20px;
-text-align:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-}
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
 
-header a{
-color:#d4af37;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-}
+        .kitap-kart, .hikaye-kart, .poem-card, .card {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
 
-main{
-max-width:1100px;
-margin:60px auto;
-padding:20px;
-}
+        .kitap-kart h2, .kitap-kart h3, .card h2, .card h3 {
+            color: #e4b52d;
+            margin-bottom: 15px;
+        }
 
-h1{
-text-align:center;
-color:#d4af37;
-margin-bottom:40px;
-font-size:42px;
-}
+        .kitap-kart p, .card p {
+            line-height: 1.7;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
 
-.book{
-background:#1b1b1b;
-border:1px solid #333;
-border-radius:18px;
-padding:30px;
-margin-bottom:30px;
-}
+        button {
+            background: #e4b52d;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 10px;
+            transition: .3s;
+        }
 
-.book h2{
-color:#d4af37;
-margin-bottom:10px;
-}
+        button:hover {
+            opacity: .8;
+        }
 
-.book p{
-line-height:1.8;
-margin-bottom:12px;
-}
+        footer {
+            text-align: center;
+            padding: 35px;
+            margin-top: 50px;
+            color: #888;
+            background: #000;
+            border-top: 1px solid #333;
+        }
 
-.buttons{
-margin-top:20px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
+        /* ================= KUSURSUZ SARI BEĞENİ BUTONU TASARIMI ================= */
+        .like-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(228, 181, 45, 0.2);
+        }
 
-.btn{
-display:inline-block;
-padding:14px 28px;
-background:#d4af37;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-transition:.3s;
-}
+        .like-btn {
+            background: none;
+            border: 2px solid #e4b52d;
+            color: #e4b52d;
+            padding: 8px 18px;
+            font-size: 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 0 !important;
+        }
 
-.btn:hover{
-transform:scale(1.05);
-}
+        .like-btn:hover {
+            background: rgba(228, 181, 45, 0.1);
+            transform: translateY(-2px);
+        }
 
-footer{
-text-align:center;
-padding:35px;
-color:#888;
-}
+        .like-btn.liked {
+            background: #e4b52d;
+            color: #111;
+        }
 
-</style>
-
+        .like-count {
+            font-size: 14px;
+            color: #aaa;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-
-<a href="index.html">← Ana Sayfa</a>
-
-</header>
-
-<main>
-
-<h1>📚 Kitap Taslakları</h1>
-
-<div class="book">
-
-<h2>📘 Kuş Parkı</h2>
-
-<p>
-Bu romanımda kalbin beş halini ve duyguları en derinden yazmaya gayret gösterdim. 
-Kalbin beş hali dedim ya; önce âşık oldum, sonra aşktan oldum. Ve devamında haddinden fazla özleyip durdum. 
-Yetmedi ihanete uğradım, sonuç intikamla bitti. Sonra ne mi oldu? Aşk kana bulandı, kan ellerime dolandı. 
-Ve ellerim ayrılığa uğurlandı. Peki şimdi ne olacak? Acaba hayat eskisi gibi olacak mı?
-</p>
-
-<p><strong>Tür:</strong> Roman</p>
-
-<p><strong>Yazar:</strong> Yusuf Bitim</p>
-
-<p><strong>Yayın Tarihi:</strong> 30.10.2018</p>
-
-<p><strong>Yayınevi:</strong> Az Kitap</p>
-
-<p><strong>ISBN:</strong> 9786052186855</p>
-
-<p><strong>Dil:</strong> Türkçe</p>
-
-<p><strong>Sayfa Sayısı:</strong> 160</p>
-
-<p><strong>Cilt Tipi:</strong> Karton Kapak</p>
-
-<p><strong>Kağıt Cinsi:</strong> Kitap Kağıdı</p>
-
-<p><strong>Boyut:</strong> 13.5 x 21 cm</p>
-
-<p><strong>Durum:</strong> Tamamlandı</p>
-
-<div class="buttons">
-
-<a class="btn" href="kus-parki-1.pdf" target="_blank">
-📖 Oku
-</a>
-
-<a class="btn" href="kus-parki-1.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<h2>📒 Uzun Yol Masalı</h2>
-
-<p>
-Büyüklerinin sözünü dinlemeyerek ormana gidip kaybolan 6 afacan arkadaşın 
-karşısına bir cadı çıkar. Cadı onlara 12 anahtar verir ve her anahtarın 
-bir kapıyı açacağını söyler. Kapıların arkasından ya kurt ya da tavşan çıkacaktır. 
-Kurdun olduğu kapıları açmadan tavşanları toplayıp afacan kahramanlarımız 
-ormandan kurtulabilecekler mi? 
-Haydi sayfaları çevirelim, öğrenelim. Bir yandan da boyayalım.
-</p>
-
-
-<p><strong>Tür:</strong> Masal</p>
-
-<p><strong>Yazar:</strong> Yusuf Bitim</p>
-
-<p><strong>Yayın Tarihi:</strong> 2022</p>
-
-<p><strong>Yayınevi:</strong> Ateş Yayınları</p>
-
-<p><strong>ISBN:</strong> 978-625-8398-33-5</p>
-
-<p><strong>Dil:</strong> Türkçe</p>
-
-<p><strong>Sayfa Sayısı:</strong> 64</p>
-
-<p><strong>Ebat:</strong> 13,5 x 21 cm</p>
-
-<p><strong>Durum:</strong> Tamamlandı</p>
-
-
-<div class="buttons">
-
-<a class="btn" href="uzun-yol-masali.pdf" target="_blank">
-📖 Oku
-</a>
-
-<a class="btn" href="uzun-yol-masali.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<h2>📚 Yeminli Gözlerim</h2>
-
-<p>
-Aşkı, özlemi, hasreti, ayrılığı ve insanın kalbine dokunan duyguları anlatan şiirlerden oluşan bir kitap.
-</p>
-
-<p><strong>Tür:</strong> Şiir</p>
-
-<p><strong>Yazar:</strong> Yusuf Bitim</p>
-
-<p><strong>Yayınevi:</strong> Gündüz Kitapevi</p>
-
-<p><strong>ISBN:</strong> 978-9944-764-...</p>
-
-<p><strong>Dil:</strong> Türkçe</p>
-
-<p><strong>Sayfa Sayısı:</strong> 71</p>
-
-<p><strong>Ebat:</strong> 13.5 × 21 cm</p>
-
-<p><strong>Yayın Tarihi:</strong> 2008</p>
-
-<p><strong>Durum:</strong> Tamamlandı</p>
-
-<div class="buttons">
-
-<a class="btn" href="yeminli-gozlerim.pdf" target="_blank">
-📖 Oku
-</a>
-
-<a class="btn" href="yeminli-gozlerim.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<h2>📕 Gitmeyecektin</h2>
-
-<p>
-Aşkın en güzel anlarından ayrılığın en derin sessizliğine uzanan şiirlerden oluşan bu eser; özlemi, kırgınlığı, pişmanlığı ve vazgeçemeyişi anlatıyor. Her şiir, geride kalan bir duygunun izini taşırken okuyucuyu kendi hatıralarıyla baş başa bırakıyor.
-</p>
-
-<p><strong>Tür:</strong> Şiir</p>
-
-<p><strong>Yazar:</strong> Yusuf Bitim</p>
-
-<p><strong>Yayın Tarihi:</strong> 2010</p>
-
-<p><strong>Yayınevi:</strong> Yıldızlar Yayıncılık</p>
-
-<p><strong>ISBN:</strong> 978-605-5737-25-2</p>
-
-<p><strong>Dil:</strong> Türkçe</p>
-
-<p><strong>Sayfa Sayısı:</strong> 112</p>
-
-<p><strong>Boyut:</strong> 13.5 × 21 cm</p>
-
-<p><strong>Durum:</strong> Tamamlandı</p>
-
-<div class="buttons">
-
-<a class="btn" href="gitmeyecektin.pdf" target="_blank">
-📖 Oku
-</a>
-
-<a class="btn" href="gitmeyecektin.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-<div class="book">
-
-<h2>📗 Dokunma</h2>
-
-<p>
-Bu kitapta, aşk, ayrılık ve hasret adına her duyguyu bulabilirsiniz.
-</p>
-
-<p><strong>Tür:</strong> Şiir</p>
-
-<p><strong>Yazar:</strong> Yusuf Bitim</p>
-
-<p><strong>Yayın Tarihi:</strong> <!-- Yıl --></p>
-
-<p><strong>Yayınevi:</strong> <!-- Yayınevi --></p>
-
-<p><strong>ISBN:</strong> <!-- ISBN --></p>
-
-<p><strong>Dil:</strong> Türkçe</p>
-
-<p><strong>Sayfa Sayısı:</strong> <!-- Sayfa Sayısı --></p>
-
-<p><strong>Boyut:</strong> 13.5 × 21 cm</p>
-
-<p><strong>Durum:</strong> Tamamlandı</p>
-
-<div class="buttons">
-
-<a class="btn" href="dokunma.pdf" target="_blank">
-📖 Oku
-</a>
-
-<a class="btn" href="dokunma.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-</div>
- 
- 
-</main>
-
-<footer>
-
-
-© 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
-
-</footer>
-
-   
+    <header>
+        <a href="index.html" class="geri">← Ana Sayfa</a>
+        <h1>📚 Kitap Taslakları ve Eserler</h1>
+    </header>
+
+    <div class="container">
+        <!-- Kitap Listesi Başlangıcı -->
+        <div class="kitap-kart">
+            <h2>📚 Kuş Parkı (Roman)</h2>
+            <p><strong>Yazar:</strong> Yusuf Bitim</p>
+            <p>Yusuf Bitim'in büyük ses getiren ve Azerbaycan Milli Kütüphanesi koleksiyonuna dahil edilen özel roman eseri.</p>
+            <a href="kus-parki.html"><button>📖 İncele</button></a>
+        </div>
+
+        <div class="kitap-kart">
+            <h2>📚 Yeminli Gözlerim (Şiir Kitabı)</h2>
+            <p><strong>Yazar:</strong> Yusuf Bitim</p>
+            <p>Duygusal derinliği yüksek, okuyucunun kalbine dokunan harika bir şiir derlemesi.</p>
+            <a href="yeminli-gozlerim-kitap.html"><button>📖 İncele</button></a>
+        </div>
+
+        <div class="kitap-kart">
+            <h2>📚 Gitmeyecektin (Şiir Kitabı)</h2>
+            <p><strong>Yazar:</strong> Yusuf Bitim</p>
+            <p>Ayrılık, özlem ve sevda temalı şiirlerin asil bir dille kaleme alındığı özel eser.</p>
+            <a href="gitmeyecektin-kitap.html"><button>📖 İncele</button></a>
+        </div>
+
+        <div class="kitap-kart">
+            <h2>📚 Dokunma (Şiir Kitabı)</h2>
+            <p><strong>Yazar:</strong> Yusuf Bitim</p>
+            <p>İnsan ruhunun derinliklerine yolculuk yaptıran, aşkın en saf halini anlatan şiir kitabı.</p>
+            <a href="dokunma-kitap.html"><button>📖 İncele</button></a>
+        </div>
+
+        <div class="kitap-kart">
+            <h2>📚 Uzun Yol Masalı (Masal Kitabı)</h2>
+            <p><strong>Yazar:</strong> Yusuf Bitim</p>
+            <p>Aynı zamanda animasyon filme de dönüştürülen, hem büyüklere hem küçüklere hitap eden masal eseri.</p>
+            <a href="https://youtube.com" target="_blank"><button>🎬 Animasyonu İzle</button></a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
+    </footer>
+
+    <!-- HİÇBİR KİTABI KAÇIRMAYAN EVRENSEL JAVASCRIPT KODU -->
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            // Sınıf adı ne olursa olsun, sayfadaki tüm başlıkları (h2) bulur
-            const headings = document.querySelectorAll('main h2, .container h2, .poem-card h2, .hikaye-kart h2, .sarki-kart h2, .card h2');
+            // Sayfadaki tüm olası kitap kartı tasarımlarını (.kitap-kart veya .card) tarar
+            const cards = document.querySelectorAll('.kitap-kart, .card, .poem-card, .hikaye-kart');
             
-            // Hangi sayfada olduğumuzu otomatik algılar (Karışıklığı önler)
-            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "home";
+            // Hangi sayfada olduğumuzu otomatik algılar (Karışmayı önler)
+            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "books";
 
-            headings.forEach((heading, index) => {
-                // Her eser için benzersiz bir ID oluşturur
-                const itemId = `${pageName}-v3-id-${index}`;
+            cards.forEach((card, index) => {
+                const itemId = `${pageName}-kitap-id-${index}`;
                 
-                // Bulunduğu ana kutuyu (kapsayıcıyı) tespit eder
-                const parentBox = heading.parentElement;
-                if (!parentBox) return;
-
-                // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
+                // Başlangıç beğeni sayısını hafızadan al ya da 5-25 arası rastgele sayı ata
                 let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
                 if (!baseLikes) {
                     baseLikes = Math.floor(Math.random() * 21) + 5; 
@@ -371,8 +218,8 @@ Bu kitapta, aşk, ayrılık ve hasret adına her duyguyu bulabilirsiniz.
                     <span class="like-count">${currentLikes} beğeni</span>
                 `;
                 
-                // Butonu kutunun en sonuna, yani "Şiiri Oku" veya "Dinle" butonunun hemen altına ekler
-                parentBox.appendChild(likeContainer);
+                // Butonu kitap kutusunun en altına ekler
+                card.appendChild(likeContainer);
 
                 const button = likeContainer.querySelector(".like-btn");
                 const countSpan = likeContainer.querySelector(".like-count");
@@ -395,8 +242,5 @@ Bu kitapta, aşk, ayrılık ve hasret adına her duyguyu bulabilirsiniz.
             });
         });
     </script>
-
-
-
 </body>
 </html>
