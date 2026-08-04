@@ -786,6 +786,55 @@ font-size:15px;
 
 </footer>
 
+ /* ================= OTOMATİK BEĞENİ BUTONU TASARIMI ================= */
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 35px 0; /* Eserler arasında güzel bir boşluk bırakır */
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.2); /* Eserlerin altına şık bir çizgi çeker */
+}
+
+.like-btn {
+    background: none;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    padding: 6px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.like-btn .heart-icon {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.like-btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+}
+
+.like-btn.liked {
+    background: #d4af37;
+    color: #111;
+}
+
+.like-btn.liked .heart-icon {
+    transform: scale(1.2);
+}
+
+.like-count {
+    font-size: 14px;
+    color: #999;
+}
+
 
 </body>
 
