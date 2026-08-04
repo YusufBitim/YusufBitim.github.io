@@ -148,6 +148,25 @@ footer{
     padding:35px;
     margin-top:40px;
 }
+
+#lightbox{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
         
     </style>
 </head>
@@ -162,9 +181,9 @@ footer{
 <div class="container">
 
     <!-- 1. KİTAP: Kuş Parkı -->
-    <div class="kitap-kart">
 
-      <div class="kitap-kart">
+    <!-- 1. KİTAP: Kuş Parkı -->
+<div class="kitap-kart">
 
 <a href="galeri2.jpg" target="_blank">
 <img src="galeri2.jpg" alt="Kuş Parkı" class="kitap-kapak">
@@ -176,18 +195,6 @@ footer{
 Yusuf Bitim'in büyük ses getiren ve Azerbaycan Milli Kütüphanesi koleksiyonuna dahil edilen özel roman eseri.
 </p>
 
-<div class="bilgi">
-<strong>Tür:</strong> Roman
-</div>
-
-<div class="buttons">
-<a href="kus-parki.pdf" target="_blank"><button>📖 Oku</button></a>
-<a href="kus-parki.pdf" download><button>⬇️ PDF İndir</button></a>
-</div>
-
-</div>
-
-</div>
 </div>
 
         <!-- 2. KİTAP: Yeminli Gözlerim -->
@@ -237,7 +244,7 @@ Yusuf Bitim'in büyük ses getiren ve Azerbaycan Milli Kütüphanesi koleksiyonu
 
    <div class="kitap-kart">
 
-    <img src="galeri5.jpg" alt="Uzun Yol Masalı" class="kitap-kapak">
+    <img src="galeri3.jpg" alt="Uzun Yol Masalı" class="kitap-kapak">
 
     <h2>📖 Uzun Yol Masalı</h2>
 
