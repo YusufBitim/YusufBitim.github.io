@@ -1,260 +1,242 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayınlanmamış Hikâyeler | Yusuf Bitim</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<title>Yayınlanmamış Hikâyeler | Yusuf Bitim</title>
+        body {
+            background: #111;
+            color: white;
+            padding-top: 140px; /* Sabit header arkada kalmasın diye üstten boşluk ekledim */
+        }
 
-<style>
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+        h1 {
+            color: #e4b52d;
+            font-size: 30px;
+        }
 
-body{
-background:#111;
-color:white;
-}
+        .geri {
+            display: block;
+            color: #e4b52d;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-header{
-background:#000;
-padding:20px;
-text-align:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-}
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
 
-h1{
-color:#e4b52d;
-font-size:30px;
-}
+        .hikaye-kart {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
 
-.geri{
-display:block;
-color:#e4b52d;
-text-decoration:none;
-font-weight:bold;
-margin-bottom:20px;
-}
+        .hikaye-kart h2 {
+            color: #e4b52d;
+            margin-bottom: 15px;
+        }
 
+        .hikaye-kart p {
+            line-height: 1.7;
+            color: #ddd;
+        }
 
-.container{
+        .bilgi {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 14px;
+        }
 
-width:90%;
-max-width:900px;
-margin:40px auto;
+        button {
+            background: #e4b52d;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 10px;
+            transition: .3s;
+        }
 
-}
+        button:hover {
+            opacity: .8;
+        }
 
+        footer {
+            text-align: center;
+            padding: 35px;
+            margin-top: 50px;
+            color: #888;
+            background: #000;
+            border-top: 1px solid #333;
+        }
 
-.hikaye-kart{
+        /* ================= OTOMATİK BEĞENİ BUTONU TASARIMI ================= */
+        .like-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(228, 181, 45, 0.1);
+        }
 
-background:#1b1b1b;
-border:1px solid #333;
-border-radius:15px;
-padding:25px;
-margin-bottom:25px;
+        .like-btn {
+            background: none;
+            border: 2px solid #e4b52d;
+            color: #e4b52d;
+            padding: 8px 18px;
+            font-size: 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 0; /* Normal buton ayarlarını sıfırlamak için */
+        }
 
-}
+        .like-btn:hover {
+            background: rgba(228, 181, 45, 0.1);
+            transform: translateY(-2px);
+            opacity: 1;
+        }
 
+        .like-btn.liked {
+            background: #e4b52d;
+            color: #111;
+        }
 
-.hikaye-kart h2{
-
-color:#e4b52d;
-margin-bottom:15px;
-
-}
-
-
-.hikaye-kart p{
-
-line-height:1.7;
-color:#ddd;
-
-}
-
-
-.bilgi{
-
-margin-top:15px;
-color:#aaa;
-font-size:14px;
-
-}
-
-
-button{
-
-background:#e4b52d;
-border:none;
-padding:12px 25px;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-margin-top:20px;
-margin-right:10px;
-
-}
-
-
-button:hover{
-
-opacity:.8;
-
-}
-
-
-footer{
-
-text-align:center;
-padding:35px;
-margin-top:50px;
-color:#888;
-border-top:1px solid #333;
-
-}
-
-
-</style>
-
+        .like-count {
+            font-size: 14px;
+            color: #999;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<header>
-
-<a href="index.html" class="geri">
-← Ana Sayfa
-</a>
-
-<h1>📖 Yayınlanmamış Hikâyeler</h1>
-
-</header>
-
-
-
-<div class="container">
-
-
-<div class="hikaye-kart">
-
-<h2>📖 Anne Ben Geldim</h2>
-
-<p>
-Bir evladın annesine duyduğu sevginin, özlemin ve bağlılığın en derin hâlini anlatan duygusal bir hikâye. Anne sevgisinin hayatımızdaki eşsiz yerini, bir evladın kalbindeki tarifsiz değeri ve anneye verilen kıymeti anlatan özel bir eser.
-</p>
-
-<div class="bilgi">
-Tür: Hikâye
-</div>
-
-
-<a href="anne-ben-geldim.pdf">
-
-<button>📖 Oku</button>
-
-</a>
-
-
-<a href="anne-ben-geldim.pdf" download>
-
-<button>↓ PDF İndir</button>
-
-</a>
-
-
-</div>
-
-
-
-
-<div class="hikaye-kart">
-
-<h2>📖 Vicdan</h2>
-
-<p>
-Vicdanın insan hayatındaki yerini, doğru ile yanlış arasında kalan seçimleri ve kalbin içindeki sorgulamaları anlatan özel bir hikâye.
-</p>
-
-<div class="bilgi">
-Tür: Hikâye
-</div>
-
-
-<a href="vicdan-hikaye.pdf">
-
-<button>📖 Oku</button>
-
-</a>
-
-
-<a href="vicdan-hikaye.pdf" download>
-
-<button>↓ PDF İndir</button>
-
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="hikaye-kart">
-
-<h2>📖 İçimizdekiler</h2>
-
-<p>
-27 kısa hikâyeden oluşan, insanın iç dünyasına, duygularına ve hayatın farklı yönlerine dokunan özel bir hikâye dosyası.
-</p>
-
-<div class="bilgi">
-Tür: Hikâye
-</div>
-
-
-<a href="icimizdekiler.pdf">
-
-<button>📖 Oku</button>
-
-</a>
-
-
-<a href="icimizdekiler.pdf" download>
-
-<button>↓ PDF İndir</button>
-
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-<footer>
-
-© 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
-
-</footer>
-
-
-
+    <header>
+        <a href="index.html" class="geri">← Ana Sayfa</a>
+        <h1>📖 Yayınlanmamış Hikâyeler</h1>
+    </header>
+
+    <div class="container">
+
+             <div class="hikaye-kart">
+            <h2>📖 Anne Ben Geldim</h2>
+            <p>
+                Bir evladın annesine duyduğu sevginin, özlemin ve bağlılığın en derin hâlini anlatan duygusal bir hikâye. Anne sevgisinin hayatımızdaki eşsiz yerini, bir evladın kalbindeki tarifsiz değeri ve anneye verilen kıymeti anlatan özel bir eser.
+            </p>
+            <div class="bilgi">Tür: Hikâye</div>
+            <a href="anne-ben-geldim.pdf"><button>📖 Oku</button></a>
+            <a href="anne-ben-geldim.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
+
+        <div class="hikaye-kart">
+            <h2>📖 Vicdan</h2>
+            <p>
+                Vicdanın insan hayatındaki yerini, doğru ile yanlış arasında kalan seçimleri ve kalbin içindeki sorgulamaları anlatan özel bir hikâye.
+            </p>
+            <div class="bilgi">Tür: Hikâye</div>
+            <a href="vicdan-hikaye.pdf"><button>📖 Oku</button></a>
+            <a href="vicdan-hikaye.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
+
+        <div class="hikaye-kart">
+            <h2>📖 İçimizdekiler</h2>
+            <p>
+                27 kısa hikâyeden oluşan, insanın iç dünyasına, duygularına ve hayatın farklı yönlerine dokunan özel bir hikâye dosyası.
+            </p>
+            <div class="bilgi">Tür: Hikâye</div>
+            <a href="icimizdekiler.pdf"><button>📖 Oku</button></a>
+            <a href="icimizdekiler.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
+    </footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // Sayfadaki her bir hikaye kartını (.hikaye-kart) otomatik bulur
+            const cards = document.querySelectorAll('.hikaye-kart');
+            cards.forEach((card, index) => {
+                const itemId = `hikaye-id-${index}`;
+                
+                // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
+                let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
+                if (!baseLikes) {
+                    baseLikes = Math.floor(Math.random() * 21) + 5; 
+                    localStorage.setItem(`base_${itemId}`, baseLikes);
+                }
+                let isLiked = localStorage.getItem(`liked_${itemId}`) === "true";
+                let currentLikes = baseLikes + (isLiked ? 1 : 0);
+
+                // Beğeni buton yapısını oluştur
+                const likeContainer = document.createElement("div");
+                likeContainer.className = "like-container";
+                likeContainer.innerHTML = `
+                    <button class="like-btn ${isLiked ? 'liked' : ''}" data-id="${itemId}">
+                        <span class="heart-icon">${isLiked ? '❤️' : '🤍'}</span> Beğen
+                    </button>
+                    <span class="like-count">${currentLikes} beğeni</span>
+                `;
+                
+                // Butonu hikaye kartının en altına ekler
+                card.appendChild(likeContainer);
+
+                const button = likeContainer.querySelector(".like-btn");
+                const countSpan = likeContainer.querySelector(".like-count");
+
+                button.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    isLiked = !isLiked;
+                    localStorage.setItem(`liked_${itemId}`, isLiked);
+                    if (isLiked) {
+                        button.classList.add("liked");
+                        button.querySelector(".heart-icon").innerText = "❤️";
+                        currentLikes++;
+                    } else {
+                        button.classList.remove("liked");
+                        button.querySelector(".heart-icon").innerText = "🤍";
+                        currentLikes--;
+                    }
+                    countSpan.innerText = `${currentLikes} beğeni`;
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
+ 
