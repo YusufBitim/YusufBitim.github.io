@@ -218,6 +218,7 @@ color:#888;
 </div>
 
 <style>
+
 .lightbox{
 display:none;
 position:fixed;
@@ -246,6 +247,35 @@ font-size:45px;
 color:white;
 cursor:pointer;
 }
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:55px;
+color:#d4af37;
+cursor:pointer;
+user-select:none;
+padding:15px;
+transition:.3s;
+}
+
+.prev:hover,
+.next:hover{
+color:#fff;
+}
+
+.prev{
+left:20px;
+}
+
+.next{
+right:20px;
+}
+
+</style>
+ 
 </style>
 
 <script>
