@@ -1885,14 +1885,23 @@ Tarayıcınız ses dosyasını desteklemiyor.
 © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
 </footer>
 
-  <script>
+     <!-- ================= %100 KESİN ÇALIŞAN EVRENSEL BEĞENİ SİSTEMİ ================= -->
+    <script>
         window.addEventListener("DOMContentLoaded", () => {
-            // Sitenizdeki her ihtimale karşı tüm kart yapılarını (.card veya .sarki-kart) tarar
-            const cards = document.querySelectorAll('.card, .sarki-kart, .hikaye-kart, .poem-card');
+            // Sınıf adı ne olursa olsun, sayfadaki tüm başlıkları (h2) bulur
+            const headings = document.querySelectorAll('main h2, .container h2, .poem-card h2, .hikaye-kart h2, .sarki-kart h2, .card h2');
             
-            cards.forEach((card, index) => {
-                const itemId = `sarki-id-${index}`;
+            // Hangi sayfada olduğumuzu otomatik algılar (Karışıklığı önler)
+            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "home";
+
+            headings.forEach((heading, index) => {
+                // Her eser için benzersiz bir ID oluşturur
+                const itemId = `${pageName}-v3-id-${index}`;
                 
+                // Bulunduğu ana kutuyu (kapsayıcıyı) tespit eder
+                const parentBox = heading.parentElement;
+                if (!parentBox) return;
+
                 // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
                 let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
                 if (!baseLikes) {
@@ -1912,8 +1921,8 @@ Tarayıcınız ses dosyasını desteklemiyor.
                     <span class="like-count">${currentLikes} beğeni</span>
                 `;
                 
-                // Butonu kartın en sonuna ekler
-                card.appendChild(likeContainer);
+                // Butonu kutunun en sonuna, yani "Şiiri Oku" veya "Dinle" butonunun hemen altına ekler
+                parentBox.appendChild(likeContainer);
 
                 const button = likeContainer.querySelector(".like-btn");
                 const countSpan = likeContainer.querySelector(".like-count");
@@ -1936,6 +1945,7 @@ Tarayıcınız ses dosyasını desteklemiyor.
             });
         });
     </script>
+
   
 </body>
 
