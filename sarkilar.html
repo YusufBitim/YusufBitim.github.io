@@ -10,50 +10,6 @@
 
 <meta name="description" content="Yusuf Bitim şarkı sözleri ve müzikleri.">
 
-         /* ================= KUSURSUZ ŞARKI BEĞENİ BUTONU TASARIMI ================= */
-        .like-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px dashed rgba(228, 181, 45, 0.1);
-        }
-
-        .like-btn {
-            background: none;
-            border: 2px solid #e4b52d;
-            color: #e4b52d;
-            padding: 6px 15px;
-            font-size: 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 10px !important;
-        }
-
-        .like-btn:hover {
-            background: rgba(228, 181, 45, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .like-btn.liked {
-            background: #e4b52d;
-            color: #111;
-        }
-
-        .like-count {
-            font-size: 14px;
-            color: #999;
-            font-weight: bold;
-            margin-top: 10px;
-        }
- 
-
 <style>
 
 body{
@@ -238,7 +194,7 @@ Bir ümit ektim kalbe, yeşermedi neyleyeyim
 
 </p>
 
-<a class="btn" href="https://youtu.be/HXI0SmHx3R8?si=2fPGkCYrxPI0TAyp" target="_blank">
+<a class="btn" href="https://youtu.be/HXI0SmHx3R8?si=7NWjYXrZFTxOs7E-" target="_blank">
 ▶ YouTube'da Dinle
 </a>
 
@@ -1928,18 +1884,24 @@ Tarayıcınız ses dosyasını desteklemiyor.
 <footer>
 © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
 </footer>
-   
+
+     <!-- ================= %100 KESİN ÇALIŞAN EVRENSEL BEĞENİ SİSTEMİ ================= -->
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            // Sitenizdeki tüm olası şarkı kutusu ve kart yapılarını otomatik tarar
-            const cards = document.querySelectorAll('.sarki-kart, .card, .hikaye-kart, .poem-card');
+            // Sınıf adı ne olursa olsun, sayfadaki tüm başlıkları (h2) bulur
+            const headings = document.querySelectorAll('main h2, .container h2, .poem-card h2, .hikaye-kart h2, .sarki-kart h2, .card h2');
             
-            // Hangi sayfada olduğumuzu otomatik algılar (Karışmayı önler)
-            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "songs";
+            // Hangi sayfada olduğumuzu otomatik algılar (Karışıklığı önler)
+            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "home";
 
-            cards.forEach((card, index) => {
-                const itemId = `${pageName}-v4-id-${index}`;
+            headings.forEach((heading, index) => {
+                // Her eser için benzersiz bir ID oluşturur
+                const itemId = `${pageName}-v3-id-${index}`;
                 
+                // Bulunduğu ana kutuyu (kapsayıcıyı) tespit eder
+                const parentBox = heading.parentElement;
+                if (!parentBox) return;
+
                 // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
                 let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
                 if (!baseLikes) {
@@ -1959,8 +1921,8 @@ Tarayıcınız ses dosyasını desteklemiyor.
                     <span class="like-count">${currentLikes} beğeni</span>
                 `;
                 
-                // Butonu senin eklediğin o çok sayıdaki şarkı kutularının en altına enjekte eder
-                card.appendChild(likeContainer);
+                // Butonu kutunun en sonuna, yani "Şiiri Oku" veya "Dinle" butonunun hemen altına ekler
+                parentBox.appendChild(likeContainer);
 
                 const button = likeContainer.querySelector(".like-btn");
                 const countSpan = likeContainer.querySelector(".like-count");
@@ -1983,7 +1945,6 @@ Tarayıcınız ses dosyasını desteklemiyor.
             });
         });
     </script>
-
 
   
 </body>
