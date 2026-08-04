@@ -214,13 +214,13 @@ color:#888;
   <!-- Resim Büyütme -->
 <div id="lightbox" class="lightbox">
 
-    <span class="close">&times;</span>
+<span class="close">&times;</span>
 
-    <span class="prev">&#10094;</span>
+<span class="prev">&#10094;</span>
 
-    <img id="lightbox-img">
+<img id="lightbox-img">
 
-    <span class="next">&#10095;</span>
+<span class="next">&#10095;</span>
 
 </div>
 
@@ -287,24 +287,72 @@ right:20px;
 
 <script>
 
-const lightbox=document.getElementById("lightbox");
-const lightboxImg=document.getElementById("lightbox-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-document.querySelectorAll(".gallery img").forEach(img=>{
+const images = document.querySelectorAll(".gallery img");
+
+let current = 0;
+
+images.forEach((img,index)=>{
 
 img.addEventListener("click",()=>{
 
+current=index;
+
+showImage();
+
 lightbox.style.display="flex";
-lightboxImg.src=img.src;
-lightboxImg.alt=img.alt;
 
 });
 
 });
 
-lightbox.addEventListener("click",(e)=>{
+function showImage(){
 
-if(e.target!==lightboxImg){
+lightboxImg.src=images[current].src;
+lightboxImg.alt=images[current].alt;
+
+}
+
+document.querySelector(".next").addEventListener("click",function(e){
+
+e.stopPropagation();
+
+current++;
+
+if(current>=images.length){
+
+current=0;
+
+}
+
+showImage();
+
+});
+
+document.querySelector(".prev").addEventListener("click",function(e){
+
+e.stopPropagation();
+
+current--;
+
+if(current<0){
+
+current=images.length-1;
+
+}
+
+showImage();
+
+});
+
+lightbox.addEventListener("click",function(e){
+
+if(
+e.target===lightbox ||
+e.target.classList.contains("close")
+){
 
 lightbox.style.display="none";
 
