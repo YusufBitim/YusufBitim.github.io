@@ -2,360 +2,791 @@
 <html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf Bitim Şiirleri | Şiir Arşivi</title>
-    <meta name="description" content="Yusuf Bitim'in şiirleri. BUNDAN SANANE, ÖLÜMLER TAŞIYORUM GECELERDEN SABAHLARA, AHLÂ ve AKLIMI ALIR GÜZELLİĞİN adlı şiirlerini okuyun. Şair Yusuf Bitim'in şiir arşivi.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background: #111;
-            color: #fff;
-        }
+<title>Yusuf Bitim Şiirleri | Şiir Arşivi</title>
 
-        header {
-            background: #000;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+<meta name="description" content="Yusuf Bitim'in şiirleri. BUNDAN SANANE, ÖLÜMLER TAŞIYORUM GECELERDEN SABAHLARA, AHLÂ ve AKLIMI ALIR GÜZELLİĞİN adlı şiirlerini okuyun. Şair Yusuf Bitim'in şiir arşivi.">
 
-        header a {
-            color: #d4af37;
-            text-decoration: none;
-            margin: 0 18px;
-            font-weight: bold;
-            font-size: 17px;
-        }
 
-        header a:hover {
-            color: #fff;
-        }
+<style>
 
-        main {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        h1 {
-            color: #d4af37;
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
+body{
+background:#111;
+color:#fff;
+}
 
-        .poem-card {
-            background: #1f1f1f;
-            padding: 22px;
-            border-radius: 15px;
-            margin-bottom: 22px;
-            transition: .3s;
-            border-left: 4px solid #d4af37;
-        }
+header{
+background:#000;
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-        .poem-card:hover {
-            transform: translateY(-5px);
-        }
+header a{
+color:#d4af37;
+text-decoration:none;
+margin:0 18px;
+font-weight:bold;
+font-size:17px;
+}
 
-        .poem-card h2 {
-            color: #d4af37;
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
+header a:hover{
+color:#fff;
+}
 
-        .poem-card p {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #ddd;
-        }
+main{
+max-width:900px;
+margin:60px auto;
+padding:20px;
+}
 
-        .poem-card a {
-            display: inline-block;
-            margin-top: 18px;
-            background: #d4af37;
-            color: #000;
-            text-decoration: none;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: .3s;
-        }
+h1{
+color:#d4af37;
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+}
 
-        .poem-card a:hover {
-            background: #f1cd56;
-        }
+.poem-card{
+background:#1f1f1f;
+padding:22px;
+border-radius:15px;
+margin-bottom:22px;
+transition:.3s;
+border-left:4px solid #d4af37;
+}
 
-        footer {
-            text-align: center;
-            padding: 35px;
-            color: #888;
-            font-size: 15px;
-        }
+.poem-card:hover{
+transform:translateY(-5px);
+}
 
-        /* ================= OTOMATİK BEĞENİ BUTONU TASARIMI ================= */
-        .like-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px dashed rgba(212, 175, 55, 0.1);
-        }
+.poem-card h2{
+color:#d4af37;
+font-size:24px;
+margin-bottom:12px;
+}
 
-        .like-btn {
-            background: none;
-            border: 2px solid #d4af37;
-            color: #d4af37;
-            padding: 6px 15px;
-            font-size: 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
+.poem-card p{
+font-size:17px;
+line-height:1.7;
+color:#ddd;
+}
 
-        .like-btn:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateY(-2px);
-        }
+.poem-card a{
+display:inline-block;
+margin-top:18px;
+background:#d4af37;
+color:#000;
+text-decoration:none;
+padding:10px 22px;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
 
-        .like-btn.liked {
-            background: #d4af37;
-            color: #111;
-        }
+.poem-card a:hover{
+background:#f1cd56;
+}
 
-        .like-count {
-            font-size: 14px;
-            color: #999;
-        }
-    </style>
+footer{
+text-align:center;
+padding:35px;
+color:#888;
+font-size:15px;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <header>
-        <a href="index.html">← Ana Sayfa</a>
-    </header>
 
-    <main>
-        <h1>📖 Şiirler</h1>
+<header>
 
-        <div class="poem-card">
-            <h2>📖 BUNDAN SANANE</h2>
-            <a href="bundan-sanane.html">Şiiri Oku</a>
-        </div>
+<a href="index.html">← Ana Sayfa</a>
 
-        <div class="poem-card">
-            <h2>📖 ÖLÜMLER TAŞIYORUM GECELERDEN SABAHLARA</h2>
-            <a href="olumler-tasiyorum.html">Şiiri Oku</a>
-        </div>
+</header>
 
-        <div class="poem-card">
-            <h2>📖 AHLÂ</h2>
-            <a href="ahla.html">Şiiri Oku</a>
-        </div>
+<main>
 
-        <div class="poem-card">
-            <h2>📖 AKLIMI ALIR GÜZELLİĞİN</h2>
-            <a href="aklimi-alir-guzelligin.html">Şiiri Oku</a>
-        </div>
+<h1>📖 Şiirler</h1>
 
-        <div class="poem-card">
-            <h2>📖 ADIMIZ AŞKA KAVUŞUYOR</h2>
-            <a href="adimiz-aska-kavusuyor.html">Şiiri Oku</a>
-        </div>
+<div class="poem-card">
 
-        <div class="poem-card">
-            <h2>📖 YEMİNLİ GÖZLERİM</h2>
-            <a href="yeminli-gozlerim.html">Şiiri Oku</a>
-        </div>
+<h2>📖 BUNDAN SANANE</h2>
 
-        <div class="poem-card">
-            <h2>📖 BIZLER SIZLERIZ YA SIZLER..?</h2>
-            <a href="bizler-sizleriz.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 SEVMEDIM YAR YEMINLE, SENIN ÜSTÜNE</h2>
-            <a href="sevmedim-yar-yeminle-senin-ustune.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 BEN GELDIM CANLAR NEREDESINIZ</h2>
-            <a href="ben-geldim-canlar-neredesiniz.html">Şiiri Oku</a>
-        </div>
+<a href="bundan-sanane.html">Şiiri Oku</a>
 
-        <div class="poem-card">
-            <h2>📖 ÇIĞLIKLAR ÇIĞIRINDAN ÇIKMIŞ</h2>
-            <a href="cigliklar-cigirindan-cikmis.html">Şiiri Oku</a>
-        </div>
+</div>
 
-        <div class="poem-card">
-            <h2>📖 GECELER AĞLAR ANNE</h2>
-            <a href="geceler-aglar-anne.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 GİTMEYECEKTİN</h2>
-            <a href="gitmeyecektin.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 GÜLÜN SUSTUĞU KADAR BÜLBÜLÜM SANA EY YAR</h2>
-            <a href="gulun-sustugu-kadar-bulbulum-sana-ey-yar.html">Şiiri Oku</a>
-        </div>
+<div class="poem-card">
 
-        <div class="poem-card">
-            <h2>📖 HİCRAN VURUR GÖNLÜME</h2>
-            <a href="hicran-vurur-gonlume.html">Şiiri Oku</a>
-        </div>
+<h2>📖 ÖLÜMLER TAŞIYORUM GECELERDEN SABAHLARA</h2>
 
-        <div class="poem-card">
-            <h2>📖 NASIL SÖYLESEM Kİ</h2>
-            <a href="nasil-soylesem-ki.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 SANA MÜLTECİ BU GÖNLÜM</h2>
-            <a href="sana-multeci-bu-gonlum.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 PAPATYA KOKULU KADIN</h2>
-            <a href="papatya-kokulu-kadın.html">Şiiri Oku</a>
-        </div>
+<a href="olumler-tasiyorum.html">Şiiri Oku</a>
 
-        <div class="poem-card">
-            <h2>📖 EYLÜL DE SEN</h2>
-            <a href="eylul-de-sen.html">Şiiri Oku</a>
-        </div>
+</div>
 
-        <div class="poem-card">
-            <h2>📖 SENİ BİR SEVERSEM GÖRÜRSÜN</h2>
-            <a href="seni-bir-seversem-gorursun.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 GÖZLERİNDEN KORKMUYORUM ARTIK</h2>
-            <a href="gozlerinden-korkmuyorum-artik.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 VE SEN</h2>
-            <a href="ve-sen.html">Şiiri Oku</a>
-        </div>
+<div class="poem-card">
 
-        <div class="poem-card">
-            <h2>📖 DOKUNMA</h2>
-            <a href="dokunma.html">Şiiri Oku</a>
-        </div>
+<h2>📖 AHLÂ</h2>
 
-        <div class="poem-card">
-            <h2>📖 AŞK TİTRİYOR SEVGİLİ</h2>
-            <a href="ask-titriyor-sevgili.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 SUSTUM</h2>
-            <a href="sustum.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 BİR ÇOCUK BÜYÜTTÜM GÖZLERİMDE</h2>
-            <a href="ask-titriyor- bir-cocuk-buyuttum-gozlerimde">Şiiri Oku</a>
-        </div>
+<a href="ahla.html">Şiiri Oku</a>
 
-        <div class="poem-card">
-            <h2>📖 AŞIĞIM SANA İSTANBULLU GÜZELİM</h2>
-            <a href="asigim-sana-istanbullu-guzelim.html">Şiiri Oku</a>
-        </div>
+</div>
 
-        <div class="poem-card">
-            <h2>📖 SUSTMA</h2>
-            <a href="susma.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 KÖREBE</h2>
-            <a href="korebe.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 DUALARIN HATIRINA DÖN</h2>
-            <a href="dualarin-hatirina-don.html">Şiiri Oku</a>
-        </div>
+<div class="poem-card">
 
-        <div class="poem-card">
-            <h2>📖 EĞER BANA GELİRSEN</h2>
-            <a href="eger-bana-gelirsen.html">Şiiri Oku</a>
-        </div>
+<h2>📖 AKLIMI ALIR GÜZELLİĞİN</h2>
 
-        <div class="poem-card">
-            <h2>📖 İÇİMDEKİ ÇOCUKTAN BİR HATIRA - 1</h2>
-            <a href="icimdeki-cocuktan-bir-hatira-1.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 İÇİMDEKİ ÇOCUKTAN BİR HATIRA - 2</h2>
-            <a href="icimdeki-cocuktan-bir-hatira-2.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 KADINLARA ÜF DEMEYİN</h2>
-            <a href="kadinlara-uf-demeyin.html">Şiiri Oku</a>
-        </div>
+<a href="aklimi-alir-guzelligin.html">Şiiri Oku</a>
 
-        <div class="poem-card">
-            <h2>📖 SEN TAMAMLA-YANIMSIN</h2>
-            <a href="sen-tamamla-yanimsin.html">Şiiri Oku</a>
-        </div>
+</div>
 
-        <div class="poem-card">
-            <h2>📖 GİDİYOR MUSUN?</h2>
-            <a href="gidiyor-musun.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 HOŞÇAKALLAR HOŞ KALMIYOR</h2>
-            <a href="hoscakallar-hos-kalmiyor.html">Şiiri Oku</a>
-        </div>
+<div class="poem-card">
 
-        <div class="poem-card">
-            <h2>📖 DEVRİMLERİMİZ VAR BİZİM</h2>
-            <a href="devrimlerimiz-var-bizim.html">Şiiri Oku</a>
-        </div>
+<h2>📖 ADIMIZ AŞKA KAVUŞUYOR</h2>
 
-        <div class="poem-card">
-            <h2>📖 HOŞ GELDİN SEVGİLİ</h2>
-            <a href="hos-geldin-sevgili.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 İNLE KAĞIT SEN İNLE</h2>
-            <a href="inle-kagit-sen-inle.html">Şiiri Oku</a>
-        </div>
 
-        <div class="poem-card">
-            <h2>📖 AŞKIN EN HALLERİ</h2>
-            <a href="askin-en-halleri.html">Şiiri Oku</a>
-        </div>
+<a href="adimiz-aska-kavusuyor.html">Şiiri Oku</a>
 
-        <div class="poem-card">
-            <h2>📖 İSTANBUL GİBİYİM</h2>
-            <a href="istanbul-gibiyim.html">Şiiri Oku</a>
-        </div>
+</div>
 
-        <div class="poem-card">
+<div class="poem-card">
+
+<h2>📖 YEMİNLİ GÖZLERİM</h2>
+
+
+<a href="yeminli-gozlerim.html">Şiiri Oku</a>
+
+</div>
+
+<div class="poem-card">
+
+<h2>📖 BİZLER SİZLERİZ YA SİZLER..?</h2>
+
+
+
+<a href="bizler-sizleriz.html">Şiiri Oku</a>
+
+</div>
+
+<div class="poem-card">
+
+<h2>📖 SEVMEDİM YAR YEMİNLE, SENİN ÜSTÜNE</h2>
+
+
+
+<a href="sevmedim-yar-yeminle-senin-ustune.html">Şiiri Oku</a>
+
+</div>
+
+<div class="poem-card">
+
+<h2>📖 BEN GELDİM CANLAR NEREDESİNİZ</h2>
+
+
+
+<a href="ben-geldim-canlar-neredesiniz.html">Şiiri Oku</a>
+
+</div>
+
+<div class="poem-card">
+
+<h2>📖 ÇIĞLIKLAR ÇIĞIRINDAN ÇIKMIŞ</h2>
+
+
+
+<a href="cigliklar-cigirindan-cikmis.html">Şiiri Oku</a>
+
+</div>
+
+<div class="poem-card">
+
+<h2>📖 GECELER AĞLAR ANNE</h2>
+
+
+
+<a href="geceler-aglar-anne.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 GİTMEYECEKTİN</h2>
+
+
+
+<a href="gitmeyecektin.html ">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 GÜLÜN SUSTUĞU KADAR BÜLBÜLÜM SANA EY YAR</h2>
+
+
+
+<a href="gulun-sustugu-kadar-bulbulum-sana-ey-yar.html  ">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 HİCRAN VURUR GÖNLÜME</h2>
+
+
+
+<a href=" hicran-vurur-gonlume.html ">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 NASIL SÖYLESEM Kİ</h2>
+
+
+
+<a href=" nasil-soylesem-ki.html ">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 SANA MÜLTECİ BU GÖNLÜM</h2>
+
+
+
+<a href=" sana-multeci-bu-gonlum.html ">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 PAPATYA KOKULU KADIN</h2>
+
+
+
+<a href=" papatya-kokulu-kadın.html ">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 EYLÜL DE SEN</h2>
+
+
+<a href=" eylul-de-sen.html ">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 SENİ BİR SEVERSEM GÖRÜRSÜN</h2>
+
+
+<a href=" seni-bir-seversem-gorursun.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 GÖZLERİNDEN KORKMUYORUM ARTIK</h2>
+
+
+<a href=" gozlerinden-korkmuyorum-artik.html">Şiiri Oku</a>
+
+ </div>   
+
+
+<div class="poem-card">
+
+<h2>📖 VE SEN</h2>
+
+
+<a href=" ve-sen.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 DOKUNMA</h2>
+
+
+<a href=" dokunma.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 AŞK TİTRİYOR SEVGİLİ</h2>
+
+
+<a href=" ask-titriyor-sevgili.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 SUSTUM</h2>
+
+
+<a href=" sustum.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 BİR ÇOCUK BÜYÜTTÜM GÖZLERİMDE</h2>
+
+
+<a href=" ask-titriyor- bir-cocuk-buyuttum-gozlerimde">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 AŞIĞIM SANA İSTANBULLU GÜZELİM </h2>
+
+
+<a href=" asigim-sana-istanbullu-guzelim.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 SUSTMA </h2>
+
+
+<a href=" susma.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 KÖREBE </h2>
+
+
+<a href=" korebe.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 DUALARIN HATIRINA DÖN </h2>
+
+
+<a href=" dualarin-hatirina-don.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 EĞER BANA GELİRSEN </h2>
+
+
+<a href=" eger-bana-gelirsen.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 İÇİMDEKİ ÇOCUKTAN BİR HATIRA - 1 </h2>
+
+
+<a href=" icimdeki-cocuktan-bir-hatira-1.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 İÇİMDEKİ ÇOCUKTAN BİR HATIRA - 2 </h2>
+
+
+<a href=" icimdeki-cocuktan-bir-hatira-2.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 KADINLARA ÜF DEMEYİN </h2>
+
+
+<a href=" kadinlara-uf-demeyin.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 SEN TAMAMLA-YANIMSIN </h2>
+
+<a href=" sen-tamamla-yanimsin.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 GİDİYOR MUSUN? </h2>
+
+<a href=" gidiyor-musun.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 HOŞÇAKALLAR HOŞ KALMIYOR </h2>
+
+<a href=" hoscakallar-hos-kalmiyor.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 DEVRİMLERİMİZ VAR BİZİM </h2>
+
+<a href=" devrimlerimiz-var-bizim.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 HOŞ GELDİN SEVGİLİ </h2>
+
+<a href=" hos-geldin-sevgili.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 İNLE KAĞIT SEN İNLE </h2>
+
+<a href=" inle-kagit-sen-inle.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 AŞKIN EN HALLERİ </h2>
+
+<a href=" askin-en-halleri.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>📖 İSTANBUL GİBİYİM </h2>
+
+<a href=" istanbul-gibiyim.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>📖 GÜNAYDIN KADINIM </h2>
+
+<a href=" gunaydin-kadinim.html">Şiiri Oku</a>
+
+ </div>   
+
+
+<div class="poem-card">
+
+<h2>📖 DUA GİBİ GEL BANA </h2>
+
+<a href=" dua-gibi-gel-bana.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 DÖN ŞEHRİME </h2>
+
+<a href=" don-sehrime.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 BECERİKSİZ ŞAİR </h2>
+
+<a href=" beceriksiz-sair.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖 ANKARA’DA ÜŞÜYOR MUSUN? </h2>
+
+<a href=" ankara'da-usuyor-musun.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>📖AŞKA GİTMEK, AŞKTAN GİTMEK </h2>
+
+<a href=" aska-gitmek,-asktan-gitmek.html">Şiiri Oku</a>
+
+ </div>   
+
+<div class="poem-card">
+
+<h2>KÜS BANA </h2>
+
+<a href=" kus-bana.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>ALMALIYIM GÖNLÜMÜ GÖNLÜNDEN </h2>
+
+<a href=" almaliyim-gonlumu-gonlunden.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>SENİ UZAKTAN SEVİYORUM </h2>
+
+<a href=" seni-uzaktan-seviyorum.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>BİR KADIN, BİR ADAM VE AŞK </h2>
+
+<a href=" bir-kadin-bir-adam-ve-ask.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>İYİ Kİ VARSIN </h2>
+
+<a href=" iyi-ki-varsin.html">Şiiri Oku</a>
+
+ </div>   
+
+ 
+<div class="poem-card">
+
+<h2>BANA AŞK ÇARPTI </h2>
+
+<a href=" bana-ask-carpti.html">Şiiri Oku</a>
+
+ </div>   
+
+ <div class="poem-card">
+
+<h2>SEKİZİNCİ RENGİMSİN </h2>
+
+<a href=" sekizinci-rengimsin.html">Şiiri Oku</a>
+
+</div>   
+
+<div class="poem-card">
+
+<h2>YÜREĞİMDEN TUT </h2>
+
+<a href=" yuregimden-tut.html">Şiiri Oku</a>
+
+</div>   
+
+
+<div class="poem-card">
+
+<h2>O OLACAKSIN </h2>
+
+<a href=" o-olacaksin.html">Şiiri Oku</a>
+
+</div>   
+
+
+<div class="poem-card">
+
+<h2>BİR GÜZEL GÖRDÜM SANKİ</h2>
+
+<a href=" bir-guzel-gordum-sanki.html">Şiiri Oku</a>
+
+</div>   
+
+
+<div class="poem-card">
+
+<h2>DUALARIMDSIN</h2>
+
+<a href=" dualarimdasin.html">Şiiri Oku</a>
+
+</div>   
+
+<div class="poem-card">
+
+<h2>DOKUNUŞ</h2>
+
+<a href=" dokunus.html">Şiiri Oku</a>
+
+</div>   
+
+<div class="poem-card">
+
+<h2>BİLEMEZSİN</h2>
+
+<a href=" bilemezsin.html">Şiiri Oku</a>
+
+</div>   
+
+ <div class="poem-card">
+
+<h2>SENİ SEVMEK </h2>
+
+<a href=" seni-sevmek.html">Şiiri Oku</a>
+
+</div>   
+
+ <div class="poem-card">
+
+<h2>SENİ SEVMEK HER NEFES AŞKTIR BANA </h2>
+
+<a href=" seninle-her-nefes-asktir-bana.html">Şiiri Oku</a>
+
+</div>   
+
+<div class="poem-card">
+
+<h2>YOLUN AŞK OLSUN </h2>
+
+<a href=" yolun-ask-olsun.html">Şiiri Oku</a>
+
+</div>   
+
+ <div class="poem-card">
+
+<h2>SIR GİBİSİN BENDE </h2>
+
+<a href=" sir-gibisin-bende.html">Şiiri Oku</a>
+
+</div>   
+
+
+<div class="poem-card">
+
+<h2>SENİN ADIN AŞK </h2>
+
+<a href=" senin-adin-ask.html">Şiiri Oku</a>
+
+</div>   
+
+ <div class="poem-card">
+
+<h2>SENİ SEVİYORUM DEMEYİ ÖZLÜYORUM </h2>
+
+<a href=" seni-seviyorum-demeyi-ozluyorum.html">Şiiri Oku</a>
+
+</div>   
+
+ <div class="poem-card">
+
+<h2>İYİ Kİ YOKSUN </h2>
+
+<a href=" iyi-ki-yoksun.html">Şiiri Oku</a>
+
+</div>   
+
+
+<div class="poem-card">
+
+<h2>HÜZNÜMÜ ALEM GÖRDÜ, ALEMİ YÜZÜM </h2>
+
+<a href=" huznumu-alem-gordu-alemi-yuzum.html">Şiiri Oku</a>
+
+</div>   
+
+ 
+
+<div class="poem-card">
+
+<h2>GÖKYÜZÜM SİMSİYAH, GELİP MAVİYE BOYAR MISIN? </h2>
+
+<a href=" gokyuzum-simsiyah-gelip-maviye-boyar-misin.html ">Şiiri Oku</a>
+
+</div>   
+
+ 
+
+<div class="poem-card">
+
+<h2>AŞK-I TESİR </h2>
+
+<a href=" aski-tesir.html">Şiiri Oku</a>
+
+</div>   
+
+<div class="poem-card">
+
+<h2>AŞK-I SEBEP </h2>
+
+<a href=" aski-sebep.html">Şiiri Oku</a>
+
+</div>   
+ 
+ 
+</main>
+
+
+
+</main>
+
+
+<footer>
+
+© 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
+
+</footer>
+
+
+</body>
+
+</html>
