@@ -54,27 +54,25 @@ margin- bottom : 40px ;
 yazı tipi boyutu : 38 piksel ;
 }
 
-. galeri {
-görüntüleme : ızgara ;
-ızgara-şablonu-sütunları : tekrarla ( otomatik sığdır , minmax ( 250 px , 1 fr ) ) ;
-boşluk : 25 piksel ;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
 }
 
-
 .gallery img{
-
 width:100%;
-height:250px;
+height:200px;
 object-fit:contain;
 background:#000;
-border-radius:15px;
+border-radius:12px;
 border:2px solid #d4af37;
+padding:6px;
 transition:.3s;
-
 }
 
 .gallery img:hover{
-transform:scale(1.05);
+transform:scale(1.03);
 }
 
 footer{
