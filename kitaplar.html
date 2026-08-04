@@ -335,5 +335,57 @@ Bu kitapta, aşk, ayrılık ve hasret adına her duyguyu bulabilirsiniz.
 
 </footer>
 
+  <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // Sitenizdeki her ihtimale karşı tüm kart yapılarını (.card veya .sarki-kart) tarar
+            const cards = document.querySelectorAll('.card, .sarki-kart, .hikaye-kart, .poem-card');
+            
+            cards.forEach((card, index) => {
+                const itemId = `sarki-id-${index}`;
+                
+                // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
+                let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
+                if (!baseLikes) {
+                    baseLikes = Math.floor(Math.random() * 21) + 5; 
+                    localStorage.setItem(`base_${itemId}`, baseLikes);
+                }
+                let isLiked = localStorage.getItem(`liked_${itemId}`) === "true";
+                let currentLikes = baseLikes + (isLiked ? 1 : 0);
+
+                // Beğeni buton yapısını oluşturur
+                const likeContainer = document.createElement("div");
+                likeContainer.className = "like-container";
+                likeContainer.innerHTML = `
+                    <button class="like-btn ${isLiked ? 'liked' : ''}" data-id="${itemId}">
+                        <span class="heart-icon">${isLiked ? '❤️' : '🤍'}</span> Beğen
+                    </button>
+                    <span class="like-count">${currentLikes} beğeni</span>
+                `;
+                
+                // Butonu kartın en sonuna ekler
+                card.appendChild(likeContainer);
+
+                const button = likeContainer.querySelector(".like-btn");
+                const countSpan = likeContainer.querySelector(".like-count");
+
+                button.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    isLiked = !isLiked;
+                    localStorage.setItem(`liked_${itemId}`, isLiked);
+                    if (isLiked) {
+                        button.classList.add("liked");
+                        button.querySelector(".heart-icon").innerText = "❤️";
+                        currentLikes++;
+                    } else {
+                        button.classList.remove("liked");
+                        button.querySelector(".heart-icon").innerText = "🤍";
+                        currentLikes--;
+                    }
+                    countSpan.innerText = `${currentLikes} beğeni`;
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
