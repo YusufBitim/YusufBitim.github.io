@@ -7,155 +7,146 @@
     <title>Kitap Taslakları | Yusuf Bitim</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        body {
-            background: #111;
-            color: white;
-            padding-top: 140px; /* Sabit header arkada kalmasın diye */
-        }
+body{
+    background:#111;
+    color:#fff;
+    padding-top:140px;
+}
 
-        header {
-            background: #000;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+header{
+    background:#000;
+    padding:20px;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
 
-        h1 {
-            color: #e4b52d;
-            font-size: 30px;
-        }
+header a{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    display:block;
+    margin-bottom:15px;
+}
 
-        .geri {
-            display: block;
-            color: #e4b52d;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+h1{
+    color:#d4af37;
+    font-size:34px;
+}
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: 40px auto;
-        }
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+}
 
-        .kitap-kart {
-            background: #1b1b1b;
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-        }
-
-        .kitap-kart h2 {
-            color: #e4b52d;
-            margin-bottom: 15px;
-        }
-
-        .kitap-kart p {
-            line-height: 1.7;
-            color: #ddd;
-        }
-
-        .bilgi {
-            margin-top: 15px;
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        /* Sitenin orijinal Oku ve PDF İndir buton tasarımları */
-        button {
-            background: #e4b52d;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-right: 10px;
-            transition: .3s;
-        }
-
-        button:hover {
-            opacity: .8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 35px;
-            margin-top: 50px;
-            color: #888;
-            background: #000;
-            border-top: 1px solid #333;
-        }
-
-       
-        .like-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px dashed rgba(228, 181, 45, 0.1);
-        }
-
-        .like-btn {
-            background: none;
-            border: 2px solid #e4b52d;
-            color: #e4b52d;
-            padding: 8px 18px;
-            font-size: 14px;
-            border-radius: 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 0 !important; /* Üstteki buton ayarlarını sıfırlamak için */
-            margin-right: 0 !important;
-        }
-
-        .like-btn:hover {
-            background: rgba(228, 181, 45, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .like-btn.liked {
-            background: #e4b52d;
-            color: #111;
-        }
-
-        .like-count {
-            font-size: 14px;
-            color: #999;
-            font-weight: bold;
-        }
+.kitap-kart{
+    background:#1b1b1b;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:30px;
+    text-align:center;
+}
 
 .kitap-kapak{
+    width:220px;
+    height:auto;
     display:block;
-    width:170px;
-    height:250px;
-    object-fit:cover;
     margin:0 auto 20px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.4);
+    border-radius:10px;
+    border:2px solid #444;
     transition:.3s;
     cursor:pointer;
 }
 
 .kitap-kapak:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
+}
+
+.kitap-kart h2{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.kitap-kart p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+.bilgi{
+    color:#aaa;
+    margin:18px 0;
+    font-size:15px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.buttons a{
+    text-decoration:none;
+}
+
+button{
+    background:#d4af37;
+    color:#111;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:.85;
+}
+
+.like-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px dashed rgba(212,175,55,.2);
+}
+
+.like-btn{
+    background:#d4af37;
+    color:#111;
+    border:none;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.like-count{
+    color:#999;
+    font-size:14px;
+}
+
+footer{
+    background:#000;
+    color:#888;
+    text-align:center;
+    padding:35px;
+    margin-top:40px;
 }
         
     </style>
