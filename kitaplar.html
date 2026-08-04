@@ -142,15 +142,20 @@
             font-weight: bold;
         }
 
-.kitap-kapak{
-    width:160px;
-    height:auto;
+.kitap-resim{
     display:block;
-    margin:0 auto 20px;
-    border-radius:10px;
+    width:340px;
+    max-width:100%;
+    margin:20px auto;
+    border-radius:12px;
     cursor:pointer;
-    transition:.3s;
+    transition:0.3s;
 }
+
+.kitap-resim:hover{
+    transform:scale(1.05);
+}
+
         
     </style>
 </head>
@@ -238,7 +243,7 @@
 
     <div class="kitap-kart">
 
-    <img src="uzun-yol-masali.jpg" class="kitap-resim" alt="Uzun Yol Masalı">
+    <img src="galeri3.jpg" class="kitap-resim" alt="Uzun Yol Masalı">
 
     <h2>📖 Uzun Yol Masalı (Masal Kitabı)</h2>
 
@@ -310,6 +315,11 @@
             });
         });
     </script>
+
+<div id="lightbox">
+    <img id="lightbox-img">
+</div>
+    
 </body>
 </html>
       
