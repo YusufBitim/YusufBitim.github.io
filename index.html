@@ -277,7 +277,64 @@ padding:12px 25px;
 
 
 }
+/* ================= BEĞENİ (KALP) BUTONU TASARIMI ================= */
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px 0;
+}
 
+.like-btn {
+    background: none;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.like-btn .heart-icon {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+/* Fare üzerine geldiğinde hafifçe büyüme */
+.like-btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Beğenildiğinde butonun alacağı altın sarısı dolgulu hal */
+.like-btn.liked {
+    background: #d4af37;
+    color: #111;
+}
+
+/* Kalbe basıldığında zıplama animasyonu */
+.like-btn.liked .heart-icon {
+    transform: scale(1.3);
+    animation: pulse 0.3s alternate ease-in-out;
+}
+
+.like-count {
+    font-size: 16px;
+    color: #999;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4); }
+}
+
+        
 </style>
 
 </head>
