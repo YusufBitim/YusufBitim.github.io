@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitap Taslakları | Yusuf Bitim</title>
-    <meta name="description" content="Yusuf Bitim'in yayınlanmış kitapları ve yeni kitap taslakları arşivi. Yeminli Gözlerim, Gitmeyecektin, Dokunma ve Kuş Parkı romanı.">
 
     <style>
         * {
@@ -18,7 +17,7 @@
         body {
             background: #111;
             color: white;
-            padding-top: 140px;
+            padding-top: 140px; /* Sabit header arkada kalmasın diye */
         }
 
         header {
@@ -50,7 +49,7 @@
             margin: 40px auto;
         }
 
-        .kitap-kart, .hikaye-kart, .poem-card, .card {
+        .kitap-kart {
             background: #1b1b1b;
             border: 1px solid #333;
             border-radius: 15px;
@@ -58,17 +57,23 @@
             margin-bottom: 25px;
         }
 
-        .kitap-kart h2, .kitap-kart h3, .card h2, .card h3 {
+        .kitap-kart h2 {
             color: #e4b52d;
             margin-bottom: 15px;
         }
 
-        .kitap-kart p, .card p {
+        .kitap-kart p {
             line-height: 1.7;
             color: #ddd;
-            margin-bottom: 10px;
         }
 
+        .bilgi {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Sitenin orijinal Oku ve PDF İndir buton tasarımları */
         button {
             background: #e4b52d;
             border: none;
@@ -94,14 +99,14 @@
             border-top: 1px solid #333;
         }
 
-     
+        /* ================= KUSURSUZ SARI BEĞENİ BUTONU TASARIMI ================= */
         .like-container {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-top: 20px;
             padding-top: 15px;
-            border-top: 1px dashed rgba(228, 181, 45, 0.2);
+            border-top: 1px dashed rgba(228, 181, 45, 0.1);
         }
 
         .like-btn {
@@ -117,7 +122,8 @@
             gap: 6px;
             font-weight: bold;
             transition: all 0.3s ease;
-            margin-top: 0 !important;
+            margin-top: 0 !important; /* Üstteki buton ayarlarını sıfırlamak için */
+            margin-right: 0 !important;
         }
 
         .like-btn:hover {
@@ -132,7 +138,7 @@
 
         .like-count {
             font-size: 14px;
-            color: #aaa;
+            color: #999;
             font-weight: bold;
         }
     </style>
@@ -141,98 +147,79 @@
 <body>
 
     <header>
-      <a href="index.html" class="geri">← Ana Sayfa</a>
+        <a href="index.html" class="geri">← Ana Sayfa</a>
         <h1>📚 Kitap Taslakları</h1>
     </header>
-<div class="container">
-    
-  <div class="kitap-kart">
-    <h2>📚 Kuş Parkı (Roman)</h2>
 
+    <div class="container">
 
-    <p><strong>Yazar:</strong> Yusuf Bitim</p>
+          <!-- 1. KİTAP: Kuş Parkı -->
+        <div class="kitap-kart">
+            <h2>📖 Kuş Parkı (Roman)</h2>
+            <p>
+                Yusuf Bitim'in büyük ses getiren ve Azerbaycan Milli Kütüphanesi koleksiyonuna dahil edilen özel roman eseri.
+            </p>
+            <div class="bilgi">Tür: Roman • Yazar: Yusuf Bitim</div>
+            <a href="anne-ben-geldim.pdf"><button>📖 Oku</button></a>
+            <a href="anne-ben-geldim.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
 
-    <p>Yusuf Bitim'in büyük ses getiren ve Azerbaycan Milli Kütüphanesi koleksiyonuna dahil edilen özel roman eseri.</p>
+        <!-- 2. KİTAP: Yeminli Gözlerim -->
+        <div class="kitap-kart">
+            <h2>📖 Yeminli Gözlerim (Şiir Kitabı)</h2>
+            <p>
+                Duygusal derinliği yüksek, okuyucunun kalbine dokunan harika bir şiir derlemesi.
+            </p>
+            <div class="bilgi">Tür: Şiir Kitabı • Yazar: Yusuf Bitim</div>
+            <a href="vicdan-hikaye.pdf"><button>📖 Oku</button></a>
+            <a href="vicdan-hikaye.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
 
-    <div class="buttons">
+        <!-- 3. KİTAP: Gitmeyecektin -->
+        <div class="kitap-kart">
+            <h2>📖 Gitmeyecektin (Şiir Kitabı)</h2>
+            <p>
+                Ayrılık, özlem ve sevda temalı şiirlerin asil bir dille kaleme alındığı özel eser.
+            </p>
+            <div class="bilgi">Tür: Şiir Kitabı • Yazar: Yusuf Bitim</div>
+            <a href="icimizdekiler.pdf"><button>📖 Oku</button></a>
+            <a href="icimizdekiler.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
 
-        <a class="btn" href="kus-parki.html">📖 İncele</a>
+        <!-- 4. KİTAP: Dokunma -->
+        <div class="kitap-kart">
+            <h2>📖 Dokunma (Şiir Kitabı)</h2>
+            <p>
+                İnsan ruhunun derinliklerine yolculuk yaptıran, aşkın en saf halini anlatan şiir kitabı.
+            </p>
+            <div class="bilgi">Tür: Şiir Kitabı • Yazar: Yusuf Bitim</div>
+            <a href="icimizdekiler.pdf"><button>📖 Oku</button></a>
+            <a href="icimizdekiler.pdf" download><button>↓ PDF İndir</button></a>
+        </div>
 
-        <a class="btn" href="kus-parki-1.pdf" target="_blank">👁️ Oku</a>
-
-        <a class="btn" href="kus-parki-1.pdf" download>⬇️ PDF İndir</a>
-
+        <!-- 5. KİTAP: Uzun Yol Masalı -->
+        <div class="kitap-kart">
+            <h2>📖 Uzun Yol Masalı (Masal Kitabı)</h2>
+            <p>
+                Aynı zamanda animasyon filme de dönüştürülen, hem büyüklere hem küçüklere hitap eden masal eseri.
+            </p>
+            <div class="bilgi">Tür: Masal Kitabı • Yazar: Yusuf Bitim</div>
+            <a href="https://youtube.com" target="_blank"><button>🎬 Animasyonu İzle</button></a>
+        </div>
     </div>
-</div>
-
-     <div class="buttons">
-
-<a class="btn" href="gitmeyecektin.html">
-📖 İncele
-</a>
-
-<a class="btn" href="gitmeyecektin.pdf" target="_blank">
-👁️ Oku
-</a>
-
-<a class="btn" href="gitmeyecektin.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-<div class="buttons">
-
-<a class="btn" href="dokunma.html">
-📖 İncele
-</a>
-
-<a class="btn" href="dokunma.pdf" target="_blank">
-👁️ Oku
-</a>
-
-<a class="btn" href="dokunma.pdf" download>
-⬇️ PDF İndir
-</a>
-
-</div>
-
-      <div class="buttons">
-
-<a class="btn" href="uzun-yol-masali.html">
-📖 İncele
-</a>
-
-<a class="btn" href="uzun-yol-masali.pdf" target="_blank">
-👁️ Oku
-</a>
-
-<a class="btn" href="uzun-yol-masali.pdf" download>
-⬇️ PDF İndir
-</a>
-
-<a class="btn" href="https://youtube.com" target="_blank">
-🎬 Animasyonu İzle
-</a>
-
-</div>
 
     <footer>
         © 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
     </footer>
 
-    <!-- HİÇBİR KİTABI KAÇIRMAYAN EVRENSEL JAVASCRIPT KODU -->
+    <!-- KUSURSUZ ÇALIŞAN OTOMATİK BEĞENİ SİSTEMİ -->
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            // Sayfadaki tüm olası kitap kartı tasarımlarını (.kitap-kart veya .card) tarar
-            const cards = document.querySelectorAll('.kitap-kart, .card, .poem-card, .hikaye-kart');
+            const cards = document.querySelectorAll('.kitap-kart');
             
-            // Hangi sayfada olduğumuzu otomatik algılar (Karışmayı önler)
-            const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "books";
-
             cards.forEach((card, index) => {
-                const itemId = `${pageName}-kitap-id-${index}`;
+                const itemId = `kitap-v5-id-${index}`;
                 
-                // Başlangıç beğeni sayısını hafızadan al ya da 5-25 arası rastgele sayı ata
                 let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
                 if (!baseLikes) {
                     baseLikes = Math.floor(Math.random() * 21) + 5; 
@@ -241,7 +228,6 @@
                 let isLiked = localStorage.getItem(`liked_${itemId}`) === "true";
                 let currentLikes = baseLikes + (isLiked ? 1 : 0);
 
-                // Beğeni buton yapısını oluşturur
                 const likeContainer = document.createElement("div");
                 likeContainer.className = "like-container";
                 likeContainer.innerHTML = `
@@ -251,7 +237,6 @@
                     <span class="like-count">${currentLikes} beğeni</span>
                 `;
                 
-                // Butonu kitap kutusunun en altına ekler
                 card.appendChild(likeContainer);
 
                 const button = likeContainer.querySelector(".like-btn");
@@ -277,3 +262,4 @@
     </script>
 </body>
 </html>
+      
