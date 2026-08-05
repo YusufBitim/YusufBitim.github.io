@@ -179,20 +179,7 @@ background:#d4af37;
 color:#111;
 }
 
-.like-count{
-color:#999;
-font-size:14px;
-font-weight:bold;
-}
 
-.heart-icon{
-font-size:18px;
-transition:.3s;
-}
-
-.like-btn.liked .heart-icon{
-color:#e53935;
-}    
     
 </style>
 
@@ -210,20 +197,6 @@ color:#e53935;
 
 <main>
  
-.like-count{
-color:#999;
-font-size:14px;
-font-weight:bold;
-}
-
-.heart-icon{
-font-size:18px;
-transition:.3s;
-}
-
-.like-btn.liked .heart-icon{
-color:#e53935;
-}    
 
 <div class="film">
 
@@ -363,9 +336,23 @@ target="_blank">
 
 </script>
  
- <script>
+<script>
 
 window.addEventListener("DOMContentLoaded", () => {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll(".kitap-kapak").forEach(img => {
+        img.addEventListener("click", function () {
+            lightbox.style.display = "flex";
+            lightboxImg.src = this.src;
+        });
+    });
+
+    lightbox.addEventListener("click", function () {
+        lightbox.style.display = "none";
+    });
 
     const headings = document.querySelectorAll(".film h2");
 
