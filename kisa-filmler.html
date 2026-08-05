@@ -106,14 +106,15 @@ border-top:1px solid #333;
 }
 
 .kitap-kapak{
-width:180px;
-height:auto;
-display:block;
-margin:0 auto 20px;
-border-radius:10px;
-border:2px solid #444;
-cursor:pointer;
-transition:.3s;
+    width:360px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+    border-radius:10px;
+    border:2px solid #444;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .kitap-kapak:hover{
@@ -340,6 +341,13 @@ target="_blank">
 
 </footer>
 
+<div id="lightbox">
+    <img id="lightbox-img">
+</div>
+
+
+</script>
+ 
  <script>
 
 window.addEventListener("DOMContentLoaded", () => {
