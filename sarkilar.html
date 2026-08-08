@@ -184,6 +184,34 @@ margin:5px;
 
 <main>
 
+<input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+
+<style>
+#arama{
+    display:block;
+    width:100%;
+    max-width:830px;
+    margin:-10px auto 30px;
+    padding:18px 22px;
+    box-sizing:border-box;
+    background:#1f1f1f;
+    color:white;
+    border:2px solid #d4af37;
+    border-radius:30px;
+    font-size:18px;
+    outline:none;
+}
+
+#arama::placeholder{
+    color:#999;
+}
+
+#arama:focus{
+    border-color:#d4af37;
+    box-shadow:0 0 10px rgba(212,175,55,.25);
+}
+</style>    
+
 <h1>Şarkı Sözleri ve Müzikleri</h1>
 
 <div class="song">
