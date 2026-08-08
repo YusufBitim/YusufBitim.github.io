@@ -199,10 +199,10 @@ footer{
     <h1>📚 Kitap Taslakları</h1>
 
 
-<input id="arama" placeholder="🔎 Kısa filmlerde ara..." oninput="document.querySelectorAll('.kitap').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="kitapArama" placeholder="🔎 Kitaplarda ara..." oninput="document.querySelectorAll('.kitap-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
-#arama{
+#kitapArama{
     display:block;
     width:100%;
     max-width:830px;
@@ -217,11 +217,11 @@ footer{
     outline:none;
 }
 
-#arama::placeholder{
+#kitapArama::placeholder{
     color:#999;
 }
 
-#arama:focus{
+#kitapArama:focus{
     border-color:#d4af37;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
