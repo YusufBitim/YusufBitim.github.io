@@ -152,19 +152,23 @@
 
 <body>
 
-    <header>
-        <a href="index.html" class="geri">← Ana Sayfa</a>
-        <h1>📖 Yayınlanmamış Hikâyeler</h1>
+   <header>
+    <a href="index.html" class="geri">← Ana Sayfa</a>
+    <h1>📖 Yayınlanmamış Hikâyeler</h1>
+</header>
 
+<div class="container">
 
-<input id="hikayeArama" placeholder="🔎 Hikâyelerde ara..." oninput="document.querySelectorAll('.hikaye-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="hikayeArama"
+placeholder="🔎 Hikâyelerde ara..."
+oninput="document.querySelectorAll('.hikaye-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
 #hikayeArama{
     display:block;
     width:100%;
     max-width:830px;
-    margin:20px auto 30px;
+    margin:0 auto 30px;
     padding:18px 22px;
     box-sizing:border-box;
     background:#1f1f1f;
@@ -184,20 +188,25 @@
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
 </style>
-        
-    </header>
 
-    <div class="container">
+<div class="hikaye-kart">
+    <h2>📖 Anne Ben Geldim</h2>
 
-             <div class="hikaye-kart">
-            <h2>📖 Anne Ben Geldim</h2>
-            <p>
-                Bir evladın annesine duyduğu sevginin, özlemin ve bağlılığın en derin hâlini anlatan duygusal bir hikâye. Anne sevgisinin hayatımızdaki eşsiz yerini, bir evladın kalbindeki tarifsiz değeri ve anneye verilen kıymeti anlatan özel bir eser.
-            </p>
-            <div class="bilgi">Tür: Hikâye</div>
-            <a href="anne-ben-geldim.pdf"><button>📖 Oku</button></a>
-            <a href="anne-ben-geldim.pdf" download><button>↓ PDF İndir</button></a>
-        </div>
+    <p>
+        Bir evladın annesine duyduğu sevginin, özlemin ve bağlılığın en derin hâlini anlatan duygusal bir hikâye.
+        Anne sevgisinin hayatımızdaki eşsiz yerini, bir evladın kalbindeki tarifsiz değeri ve anneye verilen kıymeti anlatan özel bir eser.
+    </p>
+
+    <div class="bilgi">Tür: Hikâye</div>
+
+    <a href="anne-ben-geldim.pdf">
+        <button>📖 Oku</button>
+    </a>
+
+    <a href="anne-ben-geldim.pdf" download>
+        <button>↓ PDF İndir</button>
+    </a>
+</div>
 
         <div class="hikaye-kart">
             <h2>📖 Vicdan</h2>
