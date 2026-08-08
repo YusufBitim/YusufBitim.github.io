@@ -149,6 +149,8 @@
     <main>
         <h1>📖 Şiirler</h1>
 
+        <input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+
         <div class="poem-card">
             <h2>📖 BUNDAN SANANE</h2>
             <a href="bundan-sanane.html">Şiiri Oku</a>
