@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Videolar | Yusuf Bitim</title>
+
+<meta name="description" content="Yusuf Bitim'in videoları ve video çalışmaları.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:#fff;
+padding-top:140px;
+}
+
+/* ================= HEADER ================= */
+
+header{
+background:#000;
+padding:20px;
+text-align:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+}
+
+header a{
+color:#d4af37;
+text-decoration:none;
+font-weight:bold;
+display:block;
+margin-bottom:18px;
+}
+
+header h1{
+color:#d4af37;
+font-size:38px;
+}
+
+/* ================= ANA ALAN ================= */
+
+main{
+width:90%;
+max-width:900px;
+margin:40px auto;
+}
+
+/* ================= VIDEO KARTI ================= */
+
+.video-card{
+background:#1b1b1b;
+border:1px solid #333;
+border-radius:15px;
+padding:25px;
+margin-bottom:30px;
+}
+
+.video-card img{
+width:100%;
+max-width:760px;
+height:auto;
+display:block;
+margin:0 auto 20px;
+border-radius:12px;
+border:2px solid #444;
+cursor:pointer;
+transition:.3s;
+}
+
+.video-card img:hover{
+transform:scale(1.02);
+}
+
+.video-card h2{
+color:#d4af37;
+font-size:24px;
+margin-bottom:15px;
+}
+
+.video-card p{
+color:#ddd;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+/* ================= İZLE BUTONU ================= */
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:#111;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e8c04a;
+transform:translateY(-2px);
+}
+
+/* ================= BEĞENİ ================= */
+
+.like-container{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:20px;
+padding-top:15px;
+border-top:1px dashed rgba(212,175,55,.20);
+}
+
+.like-btn{
+background:#d4af37;
+color:#111;
+border:none;
+padding:10px 22px;
+border-radius:30px;
+cursor:pointer;
+display:flex;
+align-items:center;
+gap:8px;
+font-size:15px;
+font-weight:bold;
+transition:all .3s ease;
+}
+
+.like-btn:hover{
+background:#e8c04a;
+transform:translateY(-2px);
+}
+
+.like-btn.liked{
+background:#d4af37;
+color:#111;
+}
+
+.like-btn.liked .heart-icon{
+color:#e53935;
+}
+
+.heart-icon{
+font-size:18px;
+transition:.3s;
+}
+
+.like-count{
+color:#999;
+font-size:14px;
+font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#000;
+text-align:center;
+padding:35px;
+margin-top:50px;
+color:#888;
+border-top:1px solid #333;
+}
+
+/* ================= MOBİL ================= */
+
+@media(max-width:600px){
+
+body{
+padding-top:120px;
+}
+
+header{
+padding:15px;
+}
+
+header h1{
+font-size:30px;
+}
+
+main{
+width:92%;
+margin:30px auto;
+}
+
+.video-card{
+padding:18px;
+}
+
+.video-card h2{
+font-size:20px;
+}
+
+.video-card p{
+font-size:15px;
+}
+
+.like-container{
+flex-wrap:wrap;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">← Ana Sayfa</a>
+
+<h1>Videolar</h1>
+
+</header>
+
+
+<main>
+
+
+<!-- ================= VİDEO 1 ================= -->
+
+<div class="video-card">
+
+<img
+src="https://img.youtube.com/vi/mnroPuFL65k/maxresdefault.jpg"
+alt="Senin Adın Aşk - Yusuf Bitim">
+
+<h2>🎬 SENİN ADIN AŞK</h2>
+
+<p>
+Yusuf Bitim ile doğaçlama bir çalışma.
+Aşkın en güzel halini anlatan özel video.
+</p>
+
+<a
+class="btn"
+href="https://youtu.be/mnroPuFL65k"
+target="_blank"
+rel="noopener">
+▶ İzle
+</a>
+
+<div class="like-container">
+
+<button class="like-btn">
+
+<span class="heart-icon">🤍</span>
+
+Beğen
+
+</button>
+
+<span class="like-count">0 beğeni</span>
+
+</div>
+
+</div>
+
+
+<!-- ================= VİDEO 2 ================= -->
+
+<div class="video-card">
+
+<img
+src="https://img.youtube.com/vi/_8HRKYTQ-yU/maxresdefault.jpg"
+alt="Aklımı Alır Güzelliğin - Yusuf Bitim">
+
+<h2>🎬 AKLIMI ALIR GÜZELLİĞİN</h2>
+
+<p>
+Yusuf Bitim'in video çalışması.
+</p>
+
+<a
+class="btn"
+href="https://youtu.be/_8HRKYTQ-yU"
+target="_blank"
+rel="noopener">
+▶ İzle
+</a>
+
+<div class="like-container">
+
+<button class="like-btn">
+
+<span class="heart-icon">🤍</span>
+
+Beğen
+
+</button>
+
+<span class="like-count">0 beğeni</span>
+
+</div>
+
+</div>
+
+
+</main>
+
+
+<footer>
+
+© 2026 Yusuf Bitim • Tüm Hakları Saklıdır.
+
+</footer>
+
+
+<script>
+
+/* ================= VİDEO BEĞENİ SİSTEMİ ================= */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".video-card");
+
+    cards.forEach((card, index) => {
+
+        const itemId = `video-${index}`;
+
+        let baseLikes = parseInt(
+            localStorage.getItem(`base_${itemId}`)
+        );
+
+        if (!baseLikes) {
+
+            baseLikes = Math.floor(Math.random() * 21) + 5;
+
+            localStorage.setItem(
+                `base_${itemId}`,
+                baseLikes
+            );
+
+        }
+
+        let isLiked =
+            localStorage.getItem(`liked_${itemId}`) === "true";
+
+        let currentLikes =
+            baseLikes + (isLiked ? 1 : 0);
+
+        const button =
+            card.querySelector(".like-btn");
+
+        const heart =
+            card.querySelector(".heart-icon");
+
+        const count =
+            card.querySelector(".like-count");
+
+        /* Sayfa açıldığında önceki durumu göster */
+
+        if(isLiked){
+
+            button.classList.add("liked");
+
+            heart.textContent = "❤️";
+
+        }else{
+
+            button.classList.remove("liked");
+
+            heart.textContent = "🤍";
+
+        }
+
+        count.textContent =
+            currentLikes + " beğeni";
+
+
+        /* Beğeni butonu */
+
+        button.addEventListener("click", () => {
+
+            isLiked = !isLiked;
+
+            localStorage.setItem(
+                `liked_${itemId}`,
+                isLiked
+            );
+
+            if(isLiked){
+
+                currentLikes++;
+
+                button.classList.add("liked");
+
+                heart.textContent = "❤️";
+
+            }else{
+
+                currentLikes--;
+
+                button.classList.remove("liked");
+
+                heart.textContent = "🤍";
+
+            }
+
+            count.textContent =
+                currentLikes + " beğeni";
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>
