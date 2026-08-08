@@ -188,7 +188,7 @@ margin:5px;
 
 <h1>Şarkı Sözleri ve Müzikleri</h1>
 
-<input id="sarkiArama" placeholder="🔎 Şarkılarda ara..." oninput="document.querySelectorAll('.sarki-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="sarkiArama" placeholder="🔎 Şarkılarda ara..." oninput="document.querySelectorAll('.song').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
 #sarkiArama{
@@ -215,7 +215,6 @@ margin:5px;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
 </style>
-
 <div class="song">
 
 <img src="yoruldum-be-hayat-kapak.jpg" alt="Yoruldum Be Hayat">
