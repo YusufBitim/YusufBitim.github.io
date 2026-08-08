@@ -157,14 +157,14 @@
         <h1>📖 Yayınlanmamış Hikâyeler</h1>
 
 
-<input id="arama" placeholder="🔎 Kısa filmlerde ara..." oninput="document.querySelectorAll('.hikaye').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="hikayeArama" placeholder="🔎 Hikâyelerde ara..." oninput="document.querySelectorAll('.hikaye-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
-#arama{
+#hikayeArama{
     display:block;
     width:100%;
     max-width:830px;
-    margin:-10px auto 30px;
+    margin:20px auto 30px;
     padding:18px 22px;
     box-sizing:border-box;
     background:#1f1f1f;
@@ -175,11 +175,11 @@
     outline:none;
 }
 
-#arama::placeholder{
+#hikayeArama::placeholder{
     color:#999;
 }
 
-#arama:focus{
+#hikayeArama:focus{
     border-color:#d4af37;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
