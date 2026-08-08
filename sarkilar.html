@@ -188,10 +188,10 @@ margin:5px;
 
 <h1>Şarkı Sözleri ve Müzikleri</h1>
 
- <input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="sarkiArama" placeholder="🔎 Şarkılarda ara..." oninput="document.querySelectorAll('.sarki-kart').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
-#arama{
+#sarkiArama{
     display:block;
     width:100%;
     max-width:830px;
@@ -206,15 +206,15 @@ margin:5px;
     outline:none;
 }
 
-#arama::placeholder{
+#sarkiArama::placeholder{
     color:#999;
 }
 
-#arama:focus{
+#sarkiArama:focus{
     border-color:#d4af37;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
-</style>       
+</style>
 
 <div class="song">
 
