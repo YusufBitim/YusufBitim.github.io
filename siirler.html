@@ -149,8 +149,9 @@
     <main>
         <h1>📖 Şiirler</h1>
 
-        <input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+     <input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
+<style>
 #arama{
     display:block;
     width:100%;
@@ -174,6 +175,7 @@
     border-color:#d4af37;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
+</style>
         
         <div class="poem-card">
             <h2>📖 BUNDAN SANANE</h2>
