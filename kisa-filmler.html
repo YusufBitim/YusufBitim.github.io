@@ -211,7 +211,7 @@ transform:translateY(-2px);
 
 <main>
 
-<input id="arama" placeholder="🔎 Şiirlerde ara..." oninput="document.querySelectorAll('.poem-card').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+<input id="arama" placeholder="🔎 Kısa filmlerde ara..." oninput="document.querySelectorAll('.film').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
 
 <style>
 #arama{
@@ -237,8 +237,7 @@ transform:translateY(-2px);
     border-color:#d4af37;
     box-shadow:0 0 10px rgba(212,175,55,.25);
 }
-</style>    
-
+</style>
 <div class="film">
 
  <img src="benim-hic-babam-olmadi.png" alt="Benim Hiç Babam Olmadı" class="kitap-kapak">
