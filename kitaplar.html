@@ -194,6 +194,35 @@ footer{
 
 <header>
     <a href="index.html" class="geri">← Ana Sayfa</a>
+
+<input id="arama" placeholder="🔎 Kısa filmlerde ara..." oninput="document.querySelectorAll('.kitap').forEach(x=>x.style.display=x.innerText.toLocaleLowerCase('tr-TR').includes(this.value.toLocaleLowerCase('tr-TR'))?'':'none')">
+
+<style>
+#arama{
+    display:block;
+    width:100%;
+    max-width:830px;
+    margin:-10px auto 30px;
+    padding:18px 22px;
+    box-sizing:border-box;
+    background:#1f1f1f;
+    color:white;
+    border:2px solid #d4af37;
+    border-radius:30px;
+    font-size:18px;
+    outline:none;
+}
+
+#arama::placeholder{
+    color:#999;
+}
+
+#arama:focus{
+    border-color:#d4af37;
+    box-shadow:0 0 10px rgba(212,175,55,.25);
+}
+</style>
+    
     <h1>📚 Kitap Taslakları</h1>
 </header>
 
