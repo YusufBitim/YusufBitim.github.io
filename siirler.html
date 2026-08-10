@@ -547,6 +547,8 @@
                     baseLikes = Math.floor(Math.random() * 21) + 5; 
                     localStorage.setItem(`base_${itemId}`, baseLikes);
                 }
+
+                // Başlangıç beğeni sayısını çek ya da 35-55 arası rastgele sayı ata
                 let isLiked = localStorage.getItem(`liked_${itemId}`) === "true";
                 let currentLikes = baseLikes + (isLiked ? 1 : 0);
 
