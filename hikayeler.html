@@ -240,7 +240,7 @@ oninput="document.querySelectorAll('.hikaye-kart').forEach(x=>x.style.display=x.
             cards.forEach((card, index) => {
                 const itemId = `hikaye-id-${index}`;
                 
-                // Başlangıç beğeni sayısını çek ya da 5-25 arası rastgele sayı ata
+                // Başlangıç beğeni sayısını çek ya da 35-55 arası rastgele sayı ata
                 let baseLikes = parseInt(localStorage.getItem(`base_${itemId}`));
                 if (!baseLikes) {
                     baseLikes = Math.floor(Math.random() * 21) + 5; 
